@@ -1,0 +1,16 @@
+{
+  "name": "bash.github.io",
+  "version": "0.0.0",
+  "homepage": "https://github.com/bash/bash.github.io",
+  "authors": [
+    "Ruby Schmidmeister <ruby@fog.im>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
