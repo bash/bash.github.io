@@ -1,0 +1,6 @@
+[*]
+indent_style = space
+indent_width = 4
+
+[*.{json,yml}]
+indent_width = 2

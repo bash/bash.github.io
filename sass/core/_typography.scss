@@ -1,0 +1,42 @@
+html {
+  font-size: 18px;
+}
+
+body {
+  font-family: $font-stack;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @extend %content-element;
+
+  font-family: $font-stack-headers;
+  font-weight: 300;
+  line-height: 1.5;
+  color: $color-green;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+p, img {
+  @extend %content-element;
+}
+
+a {
+  color: $color-pink;
+  text-decoration: none;
+  transition: color .2s;
+
+  &:hover {
+    color: lighten($color-pink, 10%);
+  }
+
+  &:active {
+    color: darken($color-pink, 10%);
+  }
+}

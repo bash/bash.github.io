@@ -1,0 +1,12 @@
+.bouncing-arrow {
+  @extend %content-element;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  > .arrow {
+    font-size: 1.2em;
+    margin-top: .3em;
+    animation: bouncing-arrow 1.7s infinite;
+  }
+}
