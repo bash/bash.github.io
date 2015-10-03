@@ -19,6 +19,10 @@ h1 {
   font-size: 1.8rem;
 }
 
+h2 {
+  font-size: 1.6rem;
+}
+
 p, img {
   @extend %content-element;
 }
@@ -26,8 +30,13 @@ p, img {
 a {
   color: $color-pink;
   text-decoration: none;
+  transition: color .2s;
 
   &:hover {
-    text-decoration: underline;
+    color: lighten($color-pink, 10%);
+  }
+
+  &:active {
+    color: darken($color-pink, 10%);
   }
 }

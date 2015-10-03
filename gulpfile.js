@@ -13,6 +13,7 @@ var gulp = require('gulp'),
 gulp.task('build', function () {
     gulp.src('sass/style.scss')
         .pipe(sass())
+        .on('error', console.log)
         .pipe(postcss([autoprefixer({ cascade: false })]))
         .pipe(gulp.dest('css/'));
 });
