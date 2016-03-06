@@ -1,6 +1,11 @@
 [*]
-indent_style = space
-indent_width = 4
+end_of_line = lf
+insert_final_newline = true
 
-[*.{json,yml}]
-indent_width = 2
+[*.{js,less,css,json,jshintrc}]
+charset = utf-8
+indent_style = space
+indent_size = 2
+
+[Makefile]
+indent_style = tab
