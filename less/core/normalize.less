@@ -1,0 +1,18 @@
+/**
+ * (c) 2016 Ruben Schmidmeister <ruby@fog.im>
+ */
+
+html {
+  // Fix IOS Safari's behaviour in landscape mode
+  -webkit-text-size-adjust: 100%;
+}
+
+[hidden] {
+  // make sure all browsers hide elements with [hidden]
+  display: none !important;
+}
+
+fieldset {
+  // in webkit browsers this defaults to -webkit-min-content
+  min-width: 0;
+}
