@@ -15,6 +15,7 @@ trap cleanup EXIT
 
 echo "Cloning repository..."
 git clone -b ${BRANCH} $(pwd) ${TEMP_DIR} -q
+git --git-dir ${TEMP_DIR}/.git remote add upstream ${REMOTE_URL}
 
 echo "Cleaning old files..."
 
@@ -38,4 +39,4 @@ git status
 TIMESTAMP=$(date +"%s")
 
 git commit -m "Build #${TIMESTAMP}"
-git push origin master
+git push upstream master
