@@ -34,3 +34,8 @@ done
 cd ${TEMP_DIR}
 git add -A
 git status
+
+TIMESTAMP=$(date +"%s")
+
+git commit -m "Build #${TIMESTAMP}"
+git push origin master
