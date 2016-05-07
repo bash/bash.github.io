@@ -22,7 +22,6 @@ echo "Cleaning old files..."
 OLD_FILES=$(find ${TEMP_DIR} -maxdepth 1 -mindepth 1 -not -name ".git")
 
 for FILE in ${OLD_FILES}; do
-    echo "removing ${FILE}"
     rm -rf ${FILE}
 done
 
@@ -34,9 +33,11 @@ done
 
 cd ${TEMP_DIR}
 git add -A
-git status
 
 TIMESTAMP=$(date +"%s")
 
 git commit -m "Build #${TIMESTAMP}"
+
+echo "Pushing..."
 git push upstream master
+git push origin master
