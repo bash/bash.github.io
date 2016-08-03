@@ -22,7 +22,7 @@ lint:
 	lessc --lint less/style.less
 
 deploy:
-	./scripts/deploy.sh css images index.html CNAME LICENSE
+	./scripts/deploy.sh css index.html CNAME LICENSE
 
 css/style.css: $(LESS_FILES)
 	mkdir -p $(dir $@)
