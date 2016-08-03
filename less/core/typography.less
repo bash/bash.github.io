@@ -1,19 +1,20 @@
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6, p {
+._margin-bottom-s {
   margin-bottom: 1rem;
+}
+
+h1, h2, p {
   max-width: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 300;
-  line-height: 1.5;
-  color: @color-green;
+h1, h2 {
+  font-weight: 700;
+  line-height: 1.2;
 }
 
 h1 {
@@ -27,7 +28,7 @@ h2 {
 a {
   color: @color-pink;
   text-decoration: none;
-  transition: color .2s;
+  transition: color .125s;
 
   &:hover {
     color: lighten(@color-pink, 10%);

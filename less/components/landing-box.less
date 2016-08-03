@@ -2,19 +2,20 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  margin: -1rem;
-  max-width: calc(100% + 2rem);
 
   > .avatar {
     flex-shrink: 0;
-    width: 8rem;
-    height: 8rem;
+  }
+
+  > .avatar > .image {
     border-radius: 100%;
+    width: 128px;
+    height: 128px;
   }
 
   > .avatar,
   > .content {
-    padding: 1rem;
+    padding: 8px 16px;
     max-width: 100%;
   }
 }

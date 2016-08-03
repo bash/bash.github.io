@@ -7,9 +7,13 @@ PATH  := ./node_modules/.bin:$(PATH)
 BUNDLE := css/style.css
 LESS_FILES := $(shell find less -name "*.less")
 
-.PHONY: all clean lint deploy
+.PHONY: all deps clean lint deploy
 
 all: $(BUNDLE)
+
+deps:
+	npm prune
+	npm install
 
 clean:
 	rm -rf $(BUNDLE)
