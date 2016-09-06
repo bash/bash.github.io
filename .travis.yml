@@ -1,0 +1,24 @@
+language: node_js
+
+node_js:
+- node
+
+before_script:
+- make deps
+- make lint
+
+script:
+- make
+
+on:
+   tags: true
+
+
+deploy:
+  provider: script
+
+  script:
+  - make deploy
+
+  on:
+    tags: true
