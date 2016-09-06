@@ -3,7 +3,7 @@
 FILES=${@:1}
 CURRENT_DIRECTORY=`pwd`
 TEMP_DIR=$(mktemp -d)
-REMOTE_URL=$(git remote get-url --push origin)
+REMOTE_URL="git@github.com:bash/bash.github.io.git"
 BRANCH="master"
 
 cleanup() {
