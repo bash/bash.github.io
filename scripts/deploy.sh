@@ -14,8 +14,7 @@ cleanup() {
 trap cleanup EXIT
 
 echo "Cloning repository..."
-git clone -b ${BRANCH} $(pwd) ${TEMP_DIR} -q
-git --git-dir ${TEMP_DIR}/.git remote add upstream ${REMOTE_URL}
+git clone -b ${BRANCH} ${REMOTE_URL} ${TEMP_DIR} -q
 
 echo "Cleaning old files..."
 
