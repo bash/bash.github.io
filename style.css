@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+:root {
+  --text-color: #000;
+  --background-color: #fff;
+  --accent-color: #d3227b;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+  :root {
+    --text-color: #fff;
+    --background-color: #353535;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+}
+
+:root {
+  font-family: 'SF Hello', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+  font-size: 20px;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  box-sizing: border-box; /* Set default box sizing */
+  -webkit-text-size-adjust: 100%; /* Fix IOS Safari's behaviour in landscape mode */
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+a {
+  font-weight: 500;  
+  text-decoration: none;
+  transition: color .125s;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+a:active {
+  opacity: .7;
+}
+
+h1 {
+  font-size: 44px;
+  font-weight: bold;
+  margin-bottom: 18px;
+}
+
+p {
+  max-width: 600px;
+  margin-bottom: 16px;
+}
+
+.link-with-icon {
+  display: inline-grid;
+  grid-auto-flow: column;
+  align-items: center;
+  grid-column-gap: 10px;
+}
+
+@media (max-width: 400px) {
+  h1 {
+    font-size: 32px;
+  }
+}
