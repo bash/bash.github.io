@@ -6,7 +6,7 @@ branches:
   except:
     - master
 
-install:
+install: true
 
 deploy:
   provider: script
