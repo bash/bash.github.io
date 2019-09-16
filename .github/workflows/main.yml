@@ -1,9 +1,6 @@
 name: CI
 
-on:
-  push:
-    branches:
-    - development
+on: [push]
 
 jobs:
   deploy:
@@ -17,6 +14,6 @@ jobs:
 
     - name: Deploy
       run: dpl pages git --target_branch master --local_dir build --committer_from_gh
-      if: github.repository == 'bash/bash.github.io'
+      if: github.ref == 'refs/heads/master' && github.repository == 'bash/bash.github.io'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
