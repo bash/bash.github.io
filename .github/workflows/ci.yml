@@ -1,0 +1,21 @@
+name: CI
+
+on:
+    branches:
+    - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Install dependencies
+      run: sudo gem install dpl --version 2.0.0.alpha.5
+
+    - name: Deploy
+      run: dpl pages git --target_branch master --local_dir build --committer_from_gh
+      if: github.repository == 'bash/bash.github.io'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
