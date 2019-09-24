@@ -14,7 +14,7 @@ jobs:
         ruby-version: '2.x'
 
     - name: Install dependencies
-      run: sudo gem install dpl --version 2.0.0.alpha.5
+      run: gem install dpl --version 2.0.0.alpha.5
 
     - name: Deploy
       run: dpl pages git --target_branch master --local_dir build --committer_from_gh
