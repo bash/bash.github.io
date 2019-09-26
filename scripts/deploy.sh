@@ -3,6 +3,7 @@
 set -e
 set -o xtrace
 
+git fetch
 dpl pages git \
     --target_branch master \
     --local_dir "./build" \
