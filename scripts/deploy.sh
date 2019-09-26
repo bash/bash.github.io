@@ -4,10 +4,7 @@ set -e
 set -o xtrace
 
 dpl pages git \
-    --no-committer_from_gh \
     --target_branch master \
-    --local_dir ./build \
-    --token "$GITHUB_TOKEN" \
+    --local_dir "./build" \
     --keep-history \
-    --allow_empty_commit \
-    --verbose
+    --token "$GITHUB_TOKEN"
