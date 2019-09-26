@@ -10,6 +10,7 @@ jobs:
     - uses: actions/checkout@v1
 
     - uses: actions/setup-ruby@v1
+      if: github.ref == 'refs/heads/development' && github.repository == 'bash/bash.github.io'
       with:
         ruby-version: '2.x'
 
@@ -20,15 +21,7 @@ jobs:
       run: ./scripts/build.sh
 
     - name: Deploy
-      run: >
-        dpl pages git
-            --no-committer_from_gh
-            --target_branch master
-            --local_dir build
-            --token "$GITHUB_TOKEN"
-            --keep-history
-            --allow_empty_commit
-            --verbose
+      run: ./scripts/deploy.sh
       if: github.ref == 'refs/heads/development' && github.repository == 'bash/bash.github.io'
       env:
         GITHUB_TOKEN: ${{ secrets.DEPLOYMENT_GITHUB_TOKEN }}
