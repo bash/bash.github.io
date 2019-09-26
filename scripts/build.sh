@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+set -e
+
 build_directory=build
 
 mkdir -p -- "$build_directory"
