@@ -15,7 +15,7 @@ jobs:
         ruby-version: '2.x'
 
     - name: Install dependencies
-      run: gem install dpl --version 2.0.0.alpha.5
+      run: gem install dpl --version 2.0.0.alpha.7
     
     - name: Build
       run: ./scripts/build.sh
