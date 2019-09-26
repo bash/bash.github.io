@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
-set -eo
+set -e
+set -o xtrace
 
 dpl pages git \
     --no-committer_from_gh \
