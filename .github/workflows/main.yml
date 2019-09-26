@@ -19,11 +19,10 @@ jobs:
     - name: Deploy
       run: |
         dpl pages git \
-            --repo bash/bash.github.io \
             --no-committer_from_gh \
             --target_branch master \
             --local_dir build \
             --token "$GITHUB_TOKEN"
       if: github.ref == 'refs/heads/development' && github.repository == 'bash/bash.github.io'
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.DEPLOYMENT_GITHUB_TOKEN }}
