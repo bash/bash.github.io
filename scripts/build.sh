@@ -2,9 +2,9 @@
 
 set -e
 
-build_directory=build
+build_directory="build/"
 
 mkdir -p -- "$build_directory"
 
-cp -R CNAME index.html style.css \
+cp -R icons CNAME index.html style.css \
       "$build_directory"
