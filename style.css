@@ -35,6 +35,7 @@
   background-color: var(--background-color);
   box-sizing: border-box; /* Set default box sizing */
   -webkit-text-size-adjust: 100%; /* Fix IOS Safari's behaviour in landscape mode */
+  height: 100%;
 }
 
 @supports (supported-color-schemes: light dark) {
@@ -46,7 +47,7 @@
 
 body {
   display: grid;
-  min-height: 100vh;
+  min-height: 100%;
   justify-content: center;
   align-items: center;
   padding: 20px;
