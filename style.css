@@ -45,13 +45,13 @@ body {
 }
 
 a {
-  font-weight: 500;  
+  color: var(--accent-color);
   text-decoration: none;
-  transition: color .125s;
+  transition: opacity .125s;
 }
 
 a:hover {
-  color: var(--accent-color);
+  opacity: .8;
 }
 
 a:active {
