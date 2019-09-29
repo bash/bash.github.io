@@ -28,12 +28,20 @@
 }
 
 :root {
+  supported-color-schemes: light dark;
   font-family: 'SF Hello', 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
   font-size: 20px;
   color: var(--text-color);
   background-color: var(--background-color);
   box-sizing: border-box; /* Set default box sizing */
   -webkit-text-size-adjust: 100%; /* Fix IOS Safari's behaviour in landscape mode */
+}
+
+@supports (supported-color-schemes: light dark) {
+  /* Use the provided dark background when available */
+  :root {
+    background-color: initial;
+  }
 }
 
 body {
