@@ -13,7 +13,7 @@ jobs:
       run: ./scripts/build.sh
 
     - name: Deploy
-      uses: peaceiris/actions-gh-pages@v2.4.0
+      uses: peaceiris/actions-gh-pages@3ceceb921fda4031a144decf3783a53ae834b6a3
       if: success() && github.ref == 'refs/heads/development' && github.repository == 'bash/bash.github.io'
       env:
         ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
