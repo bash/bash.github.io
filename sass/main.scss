@@ -158,6 +158,10 @@ nav {
     // justify-content: end;
     gap: .7em;
     padding: 0 var(--content-padding);
+
+    @media print {
+        display: none;
+    }
 }
 
 .card-list {
