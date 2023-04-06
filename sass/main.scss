@@ -162,8 +162,12 @@ nav {
 .card-list {
     list-style-type: none;
     display: grid;
-    grid-template-columns: repeat(2, calc(100% / 2));
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: var(--content-padding);
+
+    @media (max-width: 600px) {
+        grid-template-columns: 1fr;
+    }
 }
 
 .card-list > li {
