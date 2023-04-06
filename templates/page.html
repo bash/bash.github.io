@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}{{page.title}}{% endblock title %}
+{% block main_content %}
+<h1>{{page.title}}</h1>
+{% if page.extra.link_to %}
+See <a href="{{page.extra.link_to}}">{{page.extra.link_to}}</a>.
+{% endif %}
+{{page.content | safe}}
+{% endblock main_content %}

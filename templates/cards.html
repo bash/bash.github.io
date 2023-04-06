@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+{% block main_content %}
+
+<h1>{{section.title}}</h1>
+{{section.content | safe}}
+
+{%- if paginator %}
+    {%- set show_pages = paginator.pages -%}
+{% else %}
+    {%- set show_pages = section.pages -%}
+{% endif -%}
+
+<ul class="card-list">
+    {% for page in show_pages %}
+        <li class="card">
+            <h2 class="title">
+                {% if page.draft %}DRAFT{% endif %}
+                {% if page.extra.link_to %}
+                <a href={{ page.extra.link_to }}>{{page.title}}</a>
+                {% else %}
+                <a href={{ page.permalink }}>{{page.title}}</a>
+                {% endif %}
+            </h2>
+
+            <div class="meta">
+                {%- if page.date %}
+                    <time>{{ page.date | date(format="%Y-%m-%d") }}</time>
+                {% endif -%}
+            </div>
+
+            <div class="description">
+                {% if page.description %}
+                    {{ page.description }}
+                {% elif page.summary %}
+                    {{ page.summary | safe }}&hellip;
+                {% else %}
+                    {% set hide_read_more = true %}
+                {% endif %}
+            </div>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock main_content %}

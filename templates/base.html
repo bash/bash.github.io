@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
+    {% if config.extra.author %}
+    <meta name="author" content="{{ config.extra.author }}">
+    {% endif %}
+    <title>{% block title %}{{ config.title }}{% endblock title %}</title>
+
+    <link rel="stylesheet" type="text/css" href="{{ get_url(path="main.css") }}"/>
+
+    {# Syntax Theme #}
+    <link rel="stylesheet" type="text/css" href="{{ get_url(path="syntax-theme-dark.css") }}" media="(prefers-color-scheme: dark)" />
+    <link rel="stylesheet" type="text/css" href="{{ get_url(path="syntax-theme-light.css") }}" media="(prefers-color-scheme: light)" />
+
+    {# RSS #}
+    <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path="atom.xml", trailing_slash=false) }}"></head>
+<body>
+    <nav>
+        {% for menu in config.extra.menu %}
+            <a href={{ menu.url }}>{{ menu.name }}</a>
+        {% endfor %}
+    </nav>
+    <main>
+        {% block main_content %}
+            Nothing here?!
+        {% endblock main_content %}
+    </main>
+</body>
+</html>

@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Inter';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: oblique 0deg 10deg;
+  // ss01 = Open Digits
+  // cv08 = Upper-case i with serif
+  // zero = Slashed Zero
+  font-feature-settings: "ss01", "cv08", "zero";
+  src: url("fonts/inter/Inter.woff2?v=3.19") format("woff2");
+}
+
+@font-face {
+  font-family: 'Vollkorn';
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  src: url('./fonts/vollkorn/Vollkorn-ExtraBold.woff2') format('woff2');
+}

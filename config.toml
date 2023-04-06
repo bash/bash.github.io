@@ -1,0 +1,26 @@
+title = "bash"
+base_url = "https://www.rubys.ninja"
+compile_sass = true
+generate_feed = true
+
+[markdown]
+highlight_code = true
+highlight_theme = "css"
+highlight_themes_css = [
+  { theme = "base16-ocean-dark", filename = "syntax-theme-dark.css" },
+  { theme = "base16-ocean-light", filename = "syntax-theme-light.css" },
+]
+
+[extra]
+socials = [
+    { name= "github", url= "https://github.com/bash/", icon = "github" },
+]
+
+menu = [
+    { name = "~ruben", url = "/" },
+    { name = "/blog", url = "/blog" },
+    { name = "/projects", url = "/projects" },
+]
+
+mathjax = true
+mathjax_dollar_inline_enable = true

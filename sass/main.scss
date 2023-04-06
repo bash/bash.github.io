@@ -1,0 +1,205 @@
+@import '_fonts';
+
+// Reset / Normalize
+* {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --accent-color: #d3227b;
+    --bg-0: #f2f2f2;
+    --content-padding: 20px;
+    --border-color: #f2f2f2;
+
+    @media (prefers-color-scheme: dark) {
+        --accent-color: #ec68aa;
+        --bg-0: rgba(255, 255, 255, 5%);
+        --border-color: rgba(255, 255, 255, 10%);
+    }
+}
+
+:root {
+    font-family: 'Inter', sans-serif;
+    color-scheme: light dark;
+    scroll-behavior: smooth;
+    line-height: 1.4;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: #121212;
+    }
+}
+
+// Headings create a new "section" so we want space between the sections
+h1, h2, h3 {
+    margin-top: 2rem;
+}
+
+h1, h2, h3 {
+    font-weight: 800;
+}
+
+// Block level elements get spacing afterwards
+h1, h2, h3, p, ul, ol, pre, blockquote, details {
+    margin-bottom: 1rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-family: 'Vollkorn', sans-serif;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+h3 {
+    font-size: 1.2rem;
+}
+
+a {
+    color: var(--accent-color);
+    font-weight: 500;
+    text-decoration: none;
+}
+
+:is(h1, h2, h3) a {
+    font-weight: inherit;
+}
+
+a:hover {
+    text-decoration: underline;
+    text-underline-position: under;
+    text-decoration-thickness: 2px;
+}
+
+strong {
+    font-weight: 700;
+}
+
+em {
+    font-style: italic;
+}
+
+sup {
+    font-variant-position: super;
+}
+
+sub {
+    font-variant-position: sub;
+}
+
+ul, ol {
+    list-style-position: inside;
+    padding: 0;
+}
+
+// Nested lists need to be indented
+:is(ul, ol) :is(ul, ol) {
+    padding-left: 1em;
+    margin-bottom: 0;
+}
+
+blockquote {
+    border-left: 3px solid var(--border-color);
+    padding-left: 1rem;
+}
+
+code {
+    background-color: var(--bg-0);
+    border-radius: 0.1em 0.2em;
+    padding: 0 0.25em;
+    font-family: ui-monospace, 'Cascadia Code', 'Source Code Pro', Menlo, Consolas, 'DejaVu Sans Mono', monospace;
+}
+
+pre code {
+    background-color: transparent;
+}
+
+pre {
+    border-radius: .5em;
+    padding: var(--content-padding);
+    overflow: auto;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid var(--border-color);
+    padding: 6px 12px;
+}
+
+th {
+    font-weight: 700;
+}
+
+// The quote author is typically specified using an unordered list with a single element.
+blockquote + ul li:only-child {
+    // See: https://english.stackexchange.com/a/59320
+    list-style-type: "―";
+}
+
+main {
+    max-width: 700px;
+    margin: auto;
+    margin-trim: all;
+    padding: 0 var(--content-padding) var(--content-padding) var(--content-padding);
+}
+
+nav {
+    max-width: 700px;
+    margin: auto;
+    margin-top: 40px;
+    display: flex;
+    // justify-content: end;
+    gap: .7em;
+    padding: 0 var(--content-padding);
+}
+
+.card-list {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(2, calc(100% / 2));
+    grid-gap: var(--content-padding);
+}
+
+.card-list > li {
+    border: 1px solid var(--border-color);
+    border-radius: .5em;
+    padding: var(--content-padding);
+}
+
+.card-list > li > :first-child {
+    margin-top: 0;
+}
+
+.footnote-definition {
+    &::before {
+        content: '';
+        border-top: 2px solid var(--border-color);
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    & > sup {
+        float: left;
+        margin-right: .5em;
+    }
+}
+
+// Only show divider for first footnote
+.footnote-definition + .footnote-definition {
+    &::before {
+        content: none;
+    }
+}
+
+details[open] summary {
+    margin-bottom: .5em;
+}
