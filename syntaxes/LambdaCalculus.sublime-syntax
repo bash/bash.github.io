@@ -1,0 +1,23 @@
+%YAML 1.2
+---
+name: λ-Calculus
+file_extensions:
+- λ
+scope: source.λ
+
+contexts:
+  main:
+    - match: λ
+      scope: punctuation.definition.λ
+    - match: \w+
+      scope: variable.other.λ
+    - match: \(
+      scope: punctuation.section.parens.begin.λ
+    - match: \)
+      scope: punctuation.section.parens.end.λ
+
+    - match: '#'
+      push:
+        - meta_scope: comment.line.λ
+        - match: $\n
+          pop: true
