@@ -216,3 +216,22 @@ details[open] summary {
 .list-item > .meta > .author {
     font-weight: 700;
 }
+
+// TODO: Use figure:has(pre > code) once :has() is supported in Firefox
+figure.code-figure {
+    position: relative;
+
+    figcaption {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, .1);
+        padding: .2em .4em;
+        border-bottom-right-radius: .4em;
+        font-size: .75rem;
+    }
+
+    pre {
+        padding-top: calc(var(--content-padding) + .75rem);
+    }
+}
