@@ -8,7 +8,7 @@ Hey, I'm Ruben. I'm interested in:
 * Functional Programming
 * Parsers
 
-I'm currently studying Mathematics at the [University of Zurich][UZH].
+I'm currently studying mathematics at the [University of Zurich][UZH].
 In my spare time I enjoy working on side projects, contributing to open source and playing
 story driven or puzzle games.
 
