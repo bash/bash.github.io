@@ -12,6 +12,7 @@
     --bg-0: #f2f2f2;
     --content-padding: 20px;
     --border-color: #f2f2f2;
+    --code-block-border-radius: .5rem;
 
     @media (prefers-color-scheme: dark) {
         --accent-color: #ec68aa;
@@ -119,7 +120,7 @@ pre code {
 }
 
 pre {
-    border-radius: .5em;
+    border-radius: var(--code-block-border-radius);
     padding: var(--content-padding);
     overflow: auto;
 }
@@ -228,6 +229,7 @@ figure.code-figure {
         background-color: rgba(0, 0, 0, .1);
         padding: .2em .4em;
         border-bottom-right-radius: .4em;
+        border-top-left-radius: var(--code-block-border-radius);
         font-size: .75rem;
     }
 
