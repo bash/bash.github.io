@@ -1,5 +1,6 @@
 +++
 title = "SQLite rowid"
+authors = ["Ruben"]
 +++
 
 Tables in SQLite automatically get an auto-incrementing unique key called [`rowid`] [^1]. \

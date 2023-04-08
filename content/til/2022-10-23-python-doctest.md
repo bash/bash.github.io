@@ -1,5 +1,6 @@
 +++
 title = "Phyton doctest"
+authors = ["Ruben"]
 +++
 
 I've recently picked up Python again, and a neat feature that I ran across by chance is
