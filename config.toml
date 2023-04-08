@@ -20,6 +20,7 @@ socials = [
 menu = [
     { name = "~ruben", url = "/" },
     { name = "/blog", url = "/blog" },
+    { name = "/TIL", url = "/til" },
     { name = "/projects", url = "/projects" },
 ]
 
