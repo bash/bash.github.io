@@ -16,7 +16,10 @@
     <link rel="stylesheet" type="text/css" href="{{ get_url(path="syntax-theme-light.css") }}" media="(prefers-color-scheme: light)" />
 
     {# RSS #}
-    <link rel="alternate" type="application/atom+xml" title="{{ config.title }}" href="{{ get_url(path="atom.xml", trailing_slash=false) }}"></head>
+    {% for feed in config.extra.rss_feeds %}
+    <link rel="alternate" type="application/atom+xml" title="{{feed.name}}" href="{{ get_url(path=feed.url, trailing_slash=false) }}">
+    {% endfor %}
+</head>
 <body>
     <nav>
         {% for menu in config.extra.menu %}
