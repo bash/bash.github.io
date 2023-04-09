@@ -16,6 +16,15 @@ contexts:
     - match: \)
       scope: punctuation.section.parens.end.λ
 
+    - match: ->>
+      push:
+        - meta_scope: punctuation.λ.reduction-arrow
+        - match: \s
+          pop: true
+        - match: β|δ
+          scope: punctuation.λ.reduction-type
+          pop: true
+
     - match: '#'
       push:
         - meta_scope: comment.line.λ

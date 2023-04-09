@@ -238,3 +238,8 @@ figure.code-figure {
         padding-top: calc(var(--content-padding) + .75rem);
     }
 }
+
+// The reduction type (β or δ) after the arrow ->> should be subscript
+.z-reduction-type {
+    font-variant-position: sub;
+}
