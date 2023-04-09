@@ -1,5 +1,5 @@
 +++
-title = "Phyton doctest"
+title = "Python doctest"
 authors = ["Ruben"]
 +++
 
