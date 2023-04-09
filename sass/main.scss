@@ -11,6 +11,7 @@
     --accent-color: #d3227b;
     --bg-0: #f2f2f2;
     --content-padding: 20px;
+    --content-max-width: 700px;
     --border-color: #f2f2f2;
     --code-block-border-radius: .5rem;
 
@@ -145,19 +146,19 @@ blockquote + ul li:only-child {
 }
 
 main {
-    max-width: 700px;
+    max-width: var(--content-max-width);
     margin: auto;
     margin-trim: all;
     padding: 0 var(--content-padding) var(--content-padding) var(--content-padding);
 }
 
 nav {
-    max-width: 700px;
+    max-width: var(--content-max-width);
     margin: auto;
     margin-top: 40px;
     display: flex;
-    // justify-content: end;
-    gap: .7em;
+    flex-wrap: wrap;
+    gap: 10px 20px;
     padding: 0 var(--content-padding);
 
     @media print {
