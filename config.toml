@@ -20,7 +20,7 @@ menu = [
 ]
 
 rss_feeds = [
-  # { name = "Blog", url = "/blog/atom.xml" },
+  { name = "Blog", url = "/blog/atom.xml" },
   { name = "TIL", url = "/til/atom.xml" },
 ]
 
