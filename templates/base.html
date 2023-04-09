@@ -7,6 +7,7 @@
     {% if config.extra.author %}
     <meta name="author" content="{{ config.extra.author }}">
     {% endif %}
+    {% block metadata %}{% endblock metadata %}
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
 
     <link rel="stylesheet" type="text/css" href="{{ get_url(path="main.css") }}"/>
