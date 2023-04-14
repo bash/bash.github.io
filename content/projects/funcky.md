@@ -4,5 +4,5 @@ description = "Funcky is a functional library for C# which encourages correct us
 weight = 1
 
 [extra]
-link_to = "https://github.com/polyadic/funcky"
+link_to = "https://polyadic.github.io/funcky/"
 +++
