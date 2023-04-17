@@ -1,5 +1,5 @@
 +++
-title = "¬φ is logically equivalent to φ → ⊥"
+title = "¬φ ↔ φ → ⊥"
 authors = ["Ruben"]
 +++
 
