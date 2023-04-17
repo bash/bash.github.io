@@ -10,6 +10,7 @@
 :root {
     --accent-color: #d3227b;
     --bg-0: #f2f2f2;
+    --highlight-bg: rgba(0, 0, 0, 2.5%);
     --content-padding: 20px;
     --content-max-width: 700px;
     --border-color: #f2f2f2;
@@ -18,6 +19,7 @@
     @media (prefers-color-scheme: dark) {
         --accent-color: #ec68aa;
         --bg-0: rgba(255, 255, 255, 5%);
+        --highlight-bg: rgba(255, 255, 255, 6%);
         --border-color: rgba(255, 255, 255, 10%);
     }
 }
@@ -137,6 +139,10 @@ td, th {
 
 th {
     font-weight: 700;
+}
+
+tr:nth-child(2n) td {
+    background-color: var(--highlight-bg);
 }
 
 // The quote author is typically specified using an unordered list with a single element.
