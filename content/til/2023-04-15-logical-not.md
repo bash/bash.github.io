@@ -1,6 +1,6 @@
 +++
 title = "¬φ is logically equivalent to φ → ⊥"
-author = "Ruben"
+authors = ["Ruben"]
 +++
 
 | φ | ¬φ | φ → ⊥ | ¬φ ↔ (φ → ⊥) |
