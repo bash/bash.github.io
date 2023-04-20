@@ -83,6 +83,17 @@ strong {
     font-weight: 700;
 }
 
+strong.emoji {
+    display: inline-flex;
+    font-size: 1.5rem;
+    background-color: var(--highlight-bg);
+    width: 3rem;
+    aspect-ratio: 1;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+}
+
 em {
     font-style: italic;
 }

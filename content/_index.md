@@ -16,4 +16,8 @@ story driven or puzzle games.
 * GitHub: <https://github.com/bash>
 * Discord: bash#2044
 
+## Favourite Emoji
+<strong class="emoji">✨</strong>
+
+
 [UZH]: https://www.uzh.ch/
