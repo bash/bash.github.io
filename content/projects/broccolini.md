@@ -4,5 +4,5 @@ description = "A non-destructive parser for INI files implemented in C#. It is c
 weight = 2
 
 [extra]
-link_to = "https://github.com/bash/broccolini"
+link_to = "https://broccolini.rubys.ninja"
 +++
