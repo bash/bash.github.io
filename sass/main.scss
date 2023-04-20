@@ -5,6 +5,7 @@
     font: inherit;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 :root {
@@ -151,16 +152,18 @@ blockquote + ul li:only-child {
     list-style-type: "―";
 }
 
+body {
+    display: grid;
+    grid-template-columns: minmax(0, var(--content-max-width));
+    justify-content: center;
+}
+
 main {
-    max-width: var(--content-max-width);
-    margin: auto;
     margin-trim: all;
     padding: 0 var(--content-padding) var(--content-padding) var(--content-padding);
 }
 
 nav {
-    max-width: var(--content-max-width);
-    margin: auto;
     margin-top: 40px;
     display: flex;
     flex-wrap: wrap;
