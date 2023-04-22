@@ -1,3 +1,4 @@
+@use '_stripes' as *;
 @import '_fonts';
 
 // Reset / Normalize
@@ -32,6 +33,32 @@
     color-scheme: light dark;
     scroll-behavior: smooth;
     line-height: 1.4;
+    background-color: #fff;
+}
+
+// This layer sits just behind the body, so it will
+// get revealed when the browser overscrolls.
+:root::before {
+    content: '';
+    position: fixed;
+    height: 100vh;
+	width: 100vw;
+    z-index: -1;
+
+    $colors: #e78284, #ef9f76, #e5c890, #a6d189, #8caaee, #ca9ee6;
+    @include stripes($colors, 0%);
+    @media (prefers-color-scheme: dark) {
+        @include stripes($colors, -40%);
+    }
+}
+
+// The body has to have a background color to cover the rainbow layer.
+// We leave a small "window" that reveals the rainbow on the bottom
+body {
+    $reveal-height: 8px;
+    min-height: calc(100vh - $reveal-height);
+    margin-bottom: $reveal-height;
+    background-color: #fff;
 
     @media (prefers-color-scheme: dark) {
         background-color: #121212;
@@ -189,6 +216,7 @@ blockquote + ul li:only-child {
 body {
     display: grid;
     grid-template-columns: minmax(0, var(--content-max-width));
+    align-content: start;
     justify-content: center;
 }
 
