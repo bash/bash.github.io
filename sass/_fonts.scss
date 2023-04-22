@@ -26,3 +26,27 @@
   font-stretch: normal;
   src: url('./fonts/jetbrains-mono/JetBrainsMono-Regular.woff2') format('woff2');
 }
+
+@font-face {
+  font-family: 'Jetbrains Mono';
+  font-weight: 400;
+  font-style: italic;
+  font-stretch: normal;
+  src: url('./fonts/jetbrains-mono/JetBrainsMono-Italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Jetbrains Mono';
+  font-weight: 800;
+  font-style: normal;
+  font-stretch: normal;
+  src: url('./fonts/jetbrains-mono/JetBrainsMono-ExtraBold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Jetbrains Mono';
+  font-weight: 800;
+  font-style: italic;
+  font-stretch: normal;
+  src: url('./fonts/jetbrains-mono/JetBrainsMono-ExtraBoldItalic.woff2') format('woff2');
+}
