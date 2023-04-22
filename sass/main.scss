@@ -31,9 +31,12 @@
 :root {
     font-family: 'Inter', sans-serif;
     color-scheme: light dark;
-    scroll-behavior: smooth;
     line-height: 1.4;
     background-color: #fff;
+
+    @media (prefers-reduced-motion: no-preference) {
+        scroll-behavior: smooth;
+    }
 }
 
 // This layer sits just behind the body, so it will
