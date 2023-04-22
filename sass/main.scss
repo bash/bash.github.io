@@ -38,17 +38,19 @@
 
 // This layer sits just behind the body, so it will
 // get revealed when the browser overscrolls.
-:root::before {
-    content: '';
-    position: fixed;
-    height: 100vh;
-	width: 100vw;
-    z-index: -1;
+@media not print {
+    :root::before {
+        content: '';
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        z-index: -1;
 
-    $colors: #e78284, #ef9f76, #e5c890, #a6d189, #8caaee, #ca9ee6;
-    @include stripes($colors, 0%);
-    @media (prefers-color-scheme: dark) {
-        @include stripes($colors, -40%);
+        $colors: #e78284, #ef9f76, #e5c890, #a6d189, #8caaee, #ca9ee6;
+        @include stripes($colors, 0%);
+        @media (prefers-color-scheme: dark) {
+            @include stripes($colors, -40%);
+        }
     }
 }
 
