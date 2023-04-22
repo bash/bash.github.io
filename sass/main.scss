@@ -35,39 +35,28 @@
     background-color: #fff;
     -webkit-text-size-adjust: none; // Stop iOS Safari from adjusting the font size in landscape.
 
+    @media (prefers-color-scheme: dark) {
+        background-color: #121212;
+    }    
+
     @media (prefers-reduced-motion: no-preference) {
         scroll-behavior: smooth;
     }
 }
 
-// This layer sits just behind the body, so it will
-// get revealed when the browser overscrolls.
 @media not print {
     :root::before {
         content: '';
         position: fixed;
-        height: 100vh;
-        width: 100vw;
-        z-index: -1;
+        height: 4px;
+        width: 100%;
+        z-index: 100;
 
         $colors: #e78284, #ef9f76, #e5c890, #a6d189, #8caaee, #ca9ee6;
         @include stripes($colors, 0%);
         @media (prefers-color-scheme: dark) {
             @include stripes($colors, -40%);
         }
-    }
-}
-
-// The body has to have a background color to cover the rainbow layer.
-// We leave a small "window" that reveals the rainbow on the bottom
-body {
-    $reveal-height: 8px;
-    min-height: calc(100vh - $reveal-height);
-    margin-bottom: $reveal-height;
-    background-color: #fff;
-
-    @media (prefers-color-scheme: dark) {
-        background-color: #121212;
     }
 }
 
