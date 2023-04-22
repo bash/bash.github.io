@@ -17,6 +17,7 @@
     --content-max-width: 700px;
     --border-color: #f2f2f2;
     --code-block-border-radius: .5rem;
+    --inter-section-gap: 2rem;
 
     @media (prefers-color-scheme: dark) {
         --accent-color: #ec68aa;
@@ -44,7 +45,7 @@
 
 // Headings create a new "section" so we want space between the sections
 h1, h2, h3 {
-    margin-top: 2rem;
+    margin-top: var(--inter-section-gap);
 }
 
 h1, h2, h3 {
@@ -67,6 +68,20 @@ h2 {
 
 h3 {
     font-size: 1.2rem;
+}
+
+header {
+    margin-top: 3rem;
+    margin-bottom: var(--inter-section-gap);
+
+    h1 {
+        margin-bottom: .5rem;
+    }
+
+    // In an article header, the p acts as the lead text
+    p {
+        font-size: 1.3rem;
+    }
 }
 
 a {
