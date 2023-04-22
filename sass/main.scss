@@ -135,7 +135,8 @@ code {
     font-family: 'Jetbrains Mono', monospace;
 }
 
-pre code {
+pre code,
+:is(h1, h2, h3) code {
     background-color: transparent;
     padding: 0;
 }
