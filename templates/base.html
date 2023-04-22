@@ -10,6 +10,8 @@
     {% block metadata %}{% endblock metadata %}
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
 
+    <link rel="preload" as="font" href="{{ get_url(path="fonts/vollkorn/Vollkorn-ExtraBold.woff2") }}" />
+    <link rel="preload" as="font" href="{{ get_url(path="fonts/inter/Inter.woff2") }}" />
     <link rel="stylesheet" type="text/css" href="{{ get_url(path="main.css") }}"/>
 
     {# Syntax Theme #}
