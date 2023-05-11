@@ -4,7 +4,7 @@ title = "~ruben"
 
 Hey, I'm Ruben. I'm interested in:
 * Software Development (Rust, C#, Web Stuffs, ...)
-* Software Architecture (Clean Architecture)
+* Software Architecture (Clean Architecture, API Design)
 * Functional Programming
 * Parsers
 
