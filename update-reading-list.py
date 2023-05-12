@@ -10,7 +10,7 @@ READING_LABEL = "reading"
 def map_issue(issue):
     return {
         "title": issue["title"],
-        "body": issue["body"],
+        "body": issue["body"] or '',
         "reading": any((label["name"] == READING_LABEL for label in issue["labels"])),
     }
 
