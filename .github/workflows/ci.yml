@@ -16,6 +16,9 @@ jobs:
       with:
         tool: zola@0.17.2
 
+    - name: Update Reading List
+      run: python ./update-reading-list.py
+
     - name: Build Page
       run: zola build --output-dir _site
 

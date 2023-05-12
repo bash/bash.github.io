@@ -1,0 +1,19 @@
+{% extends "page.html" %}
+
+{% block extra_main_content %}
+
+{% set reading_list = load_data(path="reading-list.json", required=false) %}
+
+{% for entry in reading_list %}
+    {% if entry.reading %}
+        <h3 class="-has-badge"><span class="badge">reading</span> {{entry.title}}</h3>
+    {% else %}
+        <h3>{{entry.title}}</h3>
+    {% endif %}
+
+    {{entry.body | markdown | safe}}
+{% else %}
+    <p><em>I'm currently not reading any books.</em></p>
+{% endfor %}
+
+{% endblock extra_main_content %}

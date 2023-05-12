@@ -18,6 +18,7 @@ menu = [
     { name = "/blog", url = "/blog" },
     { name = "/TIL", url = "/til" },
     { name = "/projects", url = "/projects" },
+    { name = "/reading", url = "/reading-list" },
 ]
 
 rss_feeds = [

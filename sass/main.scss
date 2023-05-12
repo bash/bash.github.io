@@ -11,6 +11,7 @@
 
 :root {
     --accent-color: #d3227b;
+    --green: #a6d189;
     --accent-color-translucent: #d3227bcc;
     --bg-0: #f2f2f2;
     --highlight-bg: rgba(0, 0, 0, 2.5%);
@@ -22,6 +23,7 @@
 
     @media (prefers-color-scheme: dark) {
         --accent-color: #ec68aa;
+        --green: #40a02b;
         --bg-0: rgba(255, 255, 255, 5%);
         --highlight-bg: rgba(255, 255, 255, 6%);
         --border-color: rgba(255, 255, 255, 10%);
@@ -66,7 +68,7 @@
 }
 
 // Headings create a new "section" so we want space between the sections
-h1, h2, h3 {
+:is(h1, h2, h3):not(:is(h1, h2, h3) + :is(h1, h2, h3)) {
     margin-top: var(--inter-section-gap);
 }
 
@@ -136,6 +138,22 @@ strong.emoji {
     justify-content: center;
     align-items: center;
     border-radius: 100%;
+}
+
+.badge {
+    font-size: .7rem;
+    padding: 4px 1.5ch;
+    border-radius: 1em;
+    display: inline-block;
+    background-color: var(--green);
+}
+
+// TODO: use h1:has(.badge) once supported by Firefox
+:is(h1, h2, h3).-has-badge {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1ch;
+    align-items: center;
 }
 
 em {
