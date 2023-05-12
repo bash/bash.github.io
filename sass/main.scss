@@ -144,16 +144,13 @@ strong.emoji {
     font-size: .7rem;
     padding: 4px 1.5ch;
     border-radius: 1em;
-    display: inline-block;
+    margin-right: 1ch;
     background-color: var(--green);
 }
 
-// TODO: use h1:has(.badge) once supported by Firefox
-:is(h1, h2, h3).-has-badge {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1ch;
-    align-items: center;
+.badge,
+.badge + span {
+    vertical-align: middle;
 }
 
 em {

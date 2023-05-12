@@ -6,7 +6,7 @@
 
 {% for entry in reading_list %}
     {% if entry.reading %}
-        <h3 class="-has-badge"><span class="badge">reading</span> {{entry.title}}</h3>
+        <h3><span class="badge">reading</span>&nbsp;<span>{{entry.title}}</span></h3>
     {% else %}
         <h3>{{entry.title}}</h3>
     {% endif %}
