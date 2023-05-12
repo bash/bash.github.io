@@ -68,7 +68,8 @@
 }
 
 // Headings create a new "section" so we want space between the sections
-:is(h1, h2, h3):not(:is(h1, h2, h3) + :is(h1, h2, h3)) {
+// ... but not between a section and a direct subsection
+:is(h1, h2, h3):not(:is(h1 + h2, h2 + h3)) {
     margin-top: var(--inter-section-gap);
 }
 
