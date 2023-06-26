@@ -3,6 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Chrome only picks the SVG over the PNG icon if it has sizes=any -->
+    <link rel="icon" sizes="any" href="{{ get_url(path="favicon.svg") }}" type="image/svg+xml">
+    <!-- Firefox only picks the SVG over the PNG icon if its size >= the size of the PNG -->
+    <link rel="icon" sizes="512x512" href="{{ get_url(path="favicon.svg") }}" type="image/svg+xml">
+    <link rel="icon" sizes="192x192" href="{{ get_url(path="favicon-192x192.png") }}" type="image/png" />
+    <link rel="icon" sizes="512x512" href="{{ get_url(path="favicon-512x512.png") }}" type="image/png" />
+    <link rel="apple-touch-icon" href="{{ get_url(path="apple-touch-icon.png") }}" />
+    <link rel="mask-icon" href="{{ get_url(path="mask-icon.svg") }}" color="#ec68aa">
     <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
     {% if config.extra.author %}
     <meta name="author" content="{{ config.extra.author }}">
