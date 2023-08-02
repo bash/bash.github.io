@@ -1,5 +1,5 @@
 +++
-title = "Launching Sublime Merge from the CLI"
+title = "Launching Sublime Merge via CLI"
 authors = ["Ruben"]
 +++
 
