@@ -12,7 +12,6 @@
 :root {
     --accent-color: #d3227b;
     --green: #a6d189;
-    --accent-color-translucent: #d3227bcc;
     --bg-0: #f2f2f2;
     --highlight-bg: rgba(0, 0, 0, 2.5%);
     --content-padding: 20px;
@@ -63,8 +62,13 @@
 }
 
 ::selection {
-    color: #fff;
-    background-color: var(--accent-color-translucent);
+    color: color-mix(in srgb, var(--accent-color), #000 80%);
+    background-color: color-mix(in srgb, var(--accent-color), #fff 40%);
+
+    @media (prefers-color-scheme: dark) {
+        color: color-mix(in srgb, var(--accent-color), #fff 90%);
+        background-color: color-mix(in srgb, var(--accent-color), #000 40%);
+    }
 }
 
 // Headings create a new "section" so we want space between the sections
