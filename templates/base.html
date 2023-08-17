@@ -7,9 +7,9 @@
     <link rel="icon" sizes="any" href="{{ get_url(path="favicon.svg") }}" type="image/svg+xml">
     <!-- Firefox only picks the SVG over the PNG icon if its size >= the size of the PNG -->
     <link rel="icon" sizes="512x512" href="{{ get_url(path="favicon.svg") }}" type="image/svg+xml">
-    <link rel="icon" sizes="192x192" href="{{ get_url(path="favicon-192x192.png") }}" type="image/png" />
-    <link rel="icon" sizes="512x512" href="{{ get_url(path="favicon-512x512.png") }}" type="image/png" />
-    <link rel="apple-touch-icon" href="{{ get_url(path="apple-touch-icon.png") }}" />
+    <link rel="icon" sizes="192x192" href="{{ get_url(path="favicon-192x192.png") }}" type="image/png">
+    <link rel="icon" sizes="512x512" href="{{ get_url(path="favicon-512x512.png") }}" type="image/png">
+    <link rel="apple-touch-icon" href="{{ get_url(path="apple-touch-icon.png") }}">
     <link rel="mask-icon" href="{{ get_url(path="mask-icon.svg") }}" color="#ec68aa">
     <link rel="me" href="https://hachyderm.io/@tautropfli">
     <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
@@ -19,13 +19,13 @@
     {% block metadata %}{% endblock metadata %}
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
 
-    <link rel="preload" as="font" href="{{ get_url(path="fonts/vollkorn/Vollkorn-ExtraBold.woff2") }}" />
-    <link rel="preload" as="font" href="{{ get_url(path="fonts/inter/Inter.woff2") }}" />
-    <link rel="stylesheet" type="text/css" href="{{ get_url(path="main.css") }}"/>
+    <link rel="preload" as="font" href="{{ get_url(path="fonts/vollkorn/Vollkorn-ExtraBold.woff2") }}" crossorigin="anonymous">
+    <link rel="preload" as="font" href="{{ get_url(path="fonts/inter/Inter.woff2") }}?v=3.19" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ get_url(path="main.css") }}" crossorigin="anonymous">
 
     {# Syntax Theme #}
-    <link rel="stylesheet" type="text/css" href="{{ get_url(path="syntax-theme-dark.css") }}" media="(prefers-color-scheme: dark)" />
-    <link rel="stylesheet" type="text/css" href="{{ get_url(path="syntax-theme-light.css") }}" media="(prefers-color-scheme: light)" />
+    <link rel="stylesheet" type="text/css" href="{{ get_url(path="syntax-theme-dark.css") }}" media="(prefers-color-scheme: dark)">
+    <link rel="stylesheet" type="text/css" href="{{ get_url(path="syntax-theme-light.css") }}" media="(prefers-color-scheme: light)">
 
     {# RSS #}
     {% for feed in config.extra.rss_feeds %}
