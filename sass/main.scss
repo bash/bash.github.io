@@ -20,12 +20,20 @@
     --code-block-border-radius: .5rem;
     --inter-section-gap: 2rem;
 
+    @media (prefers-contrast: more) {
+        --border-color: #373737;
+    }
+
     @media (prefers-color-scheme: dark) {
         --accent-color: #ec68aa;
         --green: #40a02b;
         --bg-0: rgba(255, 255, 255, 5%);
         --highlight-bg: rgba(255, 255, 255, 6%);
         --border-color: rgba(255, 255, 255, 10%);
+    }
+
+    @media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+        --border-color: #fff;
     }
 }
 
@@ -143,6 +151,10 @@ strong.emoji {
     justify-content: center;
     align-items: center;
     border-radius: 100%;
+
+    @media (prefers-contrast: more) {
+        border: 1px solid var(--border-color);
+    }
 }
 
 .badge {
