@@ -1,8 +1,8 @@
 +++
-title = "~ruben"
+title = "~tau"
 +++
 
-Hey, I'm Ruben. I'm interested in:
+Hey, I'm Tau. I'm interested in:
 * Software Development (Rust, C#, Web Stuffs, ...)
 * Software Architecture (Clean Architecture, API Design)
 * Functional Programming

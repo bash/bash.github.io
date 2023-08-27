@@ -1,6 +1,6 @@
 +++
 title = "Non-Constructive Proofs"
-authors = ["Ruben"]
+authors = ["Tau"]
 +++
 
 Non-constructive proofs are a neat trick to show the existence of something without providing an example.

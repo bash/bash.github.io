@@ -1,4 +1,4 @@
-title = "~ruben"
+title = "Tau's Website"
 base_url = "https://www.rubys.ninja"
 compile_sass = true
 minify_html = true
@@ -14,7 +14,7 @@ extra_syntaxes_and_themes = ["syntaxes"]
 
 [extra]
 menu = [
-    { name = "~ruben", url = "/" },
+    { name = "~tau", url = "/" },
     { name = "/blog", url = "/blog" },
     { name = "/TIL", url = "/til" },
     { name = "/projects", url = "/projects" },

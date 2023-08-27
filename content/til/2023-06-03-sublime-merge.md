@@ -1,6 +1,6 @@
 +++
 title = "Launching Sublime Merge via CLI"
-authors = ["Ruben"]
+authors = ["Tau"]
 +++
 
 [Sublime Merge] can be launched using the `smerge` command

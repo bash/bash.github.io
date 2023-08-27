@@ -1,6 +1,6 @@
 +++
 title = "¬φ ↔ φ → ⊥"
-authors = ["Ruben"]
+authors = ["Tau"]
 +++
 
 | φ | ¬φ | φ → ⊥ | ¬φ ↔ (φ → ⊥) |
