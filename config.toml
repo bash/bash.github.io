@@ -1,5 +1,5 @@
 title = "Tau's Website"
-base_url = "https://www.rubys.ninja"
+base_url = "https://tau.garden"
 compile_sass = true
 minify_html = true
 
