@@ -2,7 +2,13 @@
 {% block title %}{{section.title}}{% endblock title %}
 {% block main_content %}
 <header>
-    <h1>{{section.title}}</h1>
+    <h1>
+        {% if section.extra.markdown_title %}
+            {{section.extra.markdown_title | markdown(inline=true) | safe}}
+        {% else %}
+            {{section.title}}
+        {% endif %}
+    </h1>
 </header>
 {{section.content | safe}}
 {% endblock main_content %}

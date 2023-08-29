@@ -1,5 +1,7 @@
 +++
 title = "~tau"
+[extra]
+markdown_title = "Tau's ~~Garden~~ Website"
 +++
 
 Hey, I'm Tau. I'm interested in:
@@ -14,7 +16,7 @@ story driven or puzzle games.
 
 ## Contact
 * GitHub: <https://github.com/bash>
-* Discord: bash#2044
+* Discord: tautropfli
 
 ## Favourite Emoji
 <strong class="emoji">✨</strong>

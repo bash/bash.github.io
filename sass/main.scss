@@ -182,6 +182,10 @@ sub {
     font-variant-position: sub;
 }
 
+del {
+    text-decoration-thickness: .1em;
+}
+
 ul, ol {
     list-style-position: inside;
     padding: 0;
