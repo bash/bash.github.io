@@ -3,10 +3,15 @@
   font-weight: 100 900;
   font-display: swap;
   font-style: oblique 0deg 10deg;
-  // ss01 = Open Digits
+  // case = Case alternates
+  // cv02 = Open four
+  // cv03 = Open six
+  // cv04 = Open nine
   // cv08 = Upper-case i with serif
+  // cv11 = Single-storey a
+  // dlig = Discretionary ligatures
   // zero = Slashed Zero
-  font-feature-settings: "ss01", "cv08", "zero";
+  font-feature-settings: "case", "cv02", "cv03", "cv04", "cv08", "cv11", "dlig", "zero";
   src: url("fonts/inter/Inter.woff2?v=3.19") format("woff2");
 }
 
@@ -16,6 +21,8 @@
   font-style: normal;
   font-stretch: normal;
   font-display: swap;
+  // dlig = Discretionary Ligatures
+  font-feature-settings: "dlig";
   src: url('./fonts/vollkorn/Vollkorn-ExtraBold.woff2') format('woff2');
 }
 
