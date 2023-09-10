@@ -1,5 +1,7 @@
 +++
 path = "projects"
-title = "Projects"
+title = "Tau's Projects"
 template = "cards.html"
+[extra]
+markdown_title = "Projects"
 +++
