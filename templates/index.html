@@ -1,14 +1,6 @@
 {% extends "base.html" %}
-{% block title %}{{section.title}}{% endblock title %}
+{% import "macros.html" as macros %}
 {% block main_content %}
-<header>
-    <h1>
-        {% if section.extra.markdown_title %}
-            {{section.extra.markdown_title | markdown(inline=true) | safe}}
-        {% else %}
-            {{section.title}}
-        {% endif %}
-    </h1>
-</header>
+{{macros::header(section_or_page=section)}}
 {{section.content | safe}}
 {% endblock main_content %}

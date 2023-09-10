@@ -1,5 +1,5 @@
 +++
-title = "~tau"
+title = "Tau's Website"
 [extra]
 markdown_title = "Tau's ~~Garden~~ Website"
 +++

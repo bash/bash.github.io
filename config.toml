@@ -14,11 +14,11 @@ extra_syntaxes_and_themes = ["syntaxes"]
 
 [extra]
 menu = [
-    { name = "~tau", url = "/" },
-    { name = "/blog", url = "/blog" },
-    { name = "/TIL", url = "/til" },
-    { name = "/projects", url = "/projects" },
-    { name = "/reading", url = "/reading-list" },
+    { name = "Home", url = "/" },
+    { name = "Blog", url = "/blog" },
+    { name = "TIL", url = "/til" },
+    { name = "Projects", url = "/projects" },
+    { name = "Reading", url = "/reading-list" },
 ]
 
 rss_feeds = [

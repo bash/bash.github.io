@@ -1,0 +1,14 @@
+{% macro header(section_or_page) %}
+    <header>
+        <h1>
+            {% if section_or_page.extra.markdown_title %}
+                {{section_or_page.extra.markdown_title | markdown(inline=true) | safe}}
+            {% else %}
+                {{section_or_page.title}}
+            {% endif %}
+        </h1>
+        {% if section_or_page.description %}
+            <p>{{section_or_page.description}}</p>
+        {% endif %}
+    </header>
+{% endmacro input %}
