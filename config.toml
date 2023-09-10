@@ -7,8 +7,8 @@ minify_html = true
 highlight_code = true
 highlight_theme = "css"
 highlight_themes_css = [
-  { theme = "base16-ocean-dark", filename = "syntax-theme-dark.css" },
-  { theme = "base16-ocean-light", filename = "syntax-theme-light.css" },
+  { theme = "catppuccin-frappe", filename = "syntax-theme-dark.css" },
+  { theme = "catppuccin-latte", filename = "syntax-theme-light.css" },
 ]
 extra_syntaxes_and_themes = ["syntaxes"]
 

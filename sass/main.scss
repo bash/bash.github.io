@@ -10,6 +10,7 @@
 }
 
 :root {
+    --text-color: #000;
     --accent-color: #d3227b;
     --green: #a6d189;
     --bg-0: #f2f2f2;
@@ -17,23 +18,27 @@
     --content-padding: 20px;
     --content-max-width: 700px;
     --border-color: #f2f2f2;
+    --text-on-border-color: var(--text-color);
     --code-block-border-radius: .5rem;
     --inter-section-gap: 2rem;
 
     @media (prefers-contrast: more) {
         --border-color: #373737;
+        --text-on-border-color: #fff;
     }
 
     @media (prefers-color-scheme: dark) {
+        --text-color: #fff;
         --accent-color: #ec68aa;
         --green: #40a02b;
         --bg-0: rgba(255, 255, 255, 5%);
         --highlight-bg: rgba(255, 255, 255, 6%);
-        --border-color: rgba(255, 255, 255, 10%);
+        --border-color: #2a2a2a;
     }
 
     @media (prefers-color-scheme: dark) and (prefers-contrast: more) {
         --border-color: #fff;
+        --text-on-border-color: #000;
     }
 }
 
@@ -41,6 +46,7 @@
     font-family: 'Inter', sans-serif;
     color-scheme: light dark;
     line-height: 1.4;
+    color: var(--text-color);
     background-color: #fff;
     -webkit-text-size-adjust: none; // Stop iOS Safari from adjusting the font size in landscape.
 
@@ -219,6 +225,8 @@ pre {
     border-radius: var(--code-block-border-radius);
     padding: var(--content-padding);
     overflow: auto;
+    background-color: transparent !important; // Needs to win against the syntax theme
+    border: 2px solid var(--border-color);
 }
 
 table {
@@ -329,8 +337,9 @@ figure.code-figure {
         position: absolute;
         top: 0;
         left: 0;
-        background-color: rgba(0, 0, 0, .1);
-        padding: .2em .4em;
+        color: var(--text-on-border-color);
+        background-color: var(--border-color);
+        padding: .4em .8em;
         border-bottom-right-radius: .4em;
         border-top-left-radius: var(--code-block-border-radius);
         font-size: .75rem;
