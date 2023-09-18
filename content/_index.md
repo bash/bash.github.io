@@ -5,7 +5,7 @@ markdown_title = "Tau's ~~Garden~~ Website"
 +++
 
 Hey, I'm Tau. I'm interested in:
-* Software Development (Rust, C#, Web Stuffs, ...)
+* Software Development (Rust, C#, Web Stuffs, …)
 * Software Architecture (Clean Architecture, API Design)
 * Functional Programming
 * Parsers
