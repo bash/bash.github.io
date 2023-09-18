@@ -130,7 +130,7 @@ a {
     font-weight: inherit;
 
     &:hover {
-        text-underline-offset: 0;
+        text-underline-offset: -0.1em;
         text-decoration-thickness: 4px;
     }
 }
