@@ -79,6 +79,7 @@
 
 h1, h2, h3 {
     font-weight: 800;
+    font-family: var(--serif);
 }
 
 // Block level elements get spacing afterwards
@@ -89,15 +90,14 @@ h1, h2, h3, p, ul, ol, pre, blockquote, details {
 h1 {
     font-size: 3rem;
     line-height: 1.1;
-    font-family: 'Vollkorn', serif;
 }
 
 h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
 header {
@@ -118,16 +118,21 @@ a {
     color: var(--accent-color);
     font-weight: 500;
     text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+        text-underline-position: under;
+        text-decoration-thickness: 2px;
+    }
 }
 
 :is(h1, h2, h3) a {
     font-weight: inherit;
-}
 
-a:hover {
-    text-decoration: underline;
-    text-underline-position: under;
-    text-decoration-thickness: 2px;
+    &:hover {
+        text-underline-offset: 0;
+        text-decoration-thickness: 4px;
+    }
 }
 
 strong {
@@ -156,6 +161,7 @@ strong.emoji {
     margin-right: 1ch;
     background-color: var(--accent-color);
     color: var(--background-color);
+    font-family: var(--sans-serif);
 }
 
 .badge,
