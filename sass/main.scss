@@ -358,6 +358,25 @@ figure.code-figure {
     }
 }
 
+.skip-link {
+    --skip-link-offset: 20px;
+    position: fixed;
+    top: var(--skip-link-offset);
+    left: var(--skip-link-offset);
+    z-index: 1000;
+    font-size: .875rem;
+    font-family: var(--sans-serif);
+    font-weight: bold;
+    background-color: var(--accent-color);
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 6px;
+
+    &:not(:focus) {
+        transform: translateY(calc(-100% - var(--skip-link-offset)));
+    }
+}
+
 // The reduction type (β or δ) after the arrow ->> should be subscript
 .z-reduction-type {
     font-variant-position: sub;
