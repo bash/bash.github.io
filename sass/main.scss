@@ -4,6 +4,8 @@
 // Reset / Normalize
 * {
     font: inherit;
+    color: inherit;
+    border: none;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -11,8 +13,8 @@
 
 :root {
     --text-color: #000;
-    --accent-color: #d3227b;
-    --green: #a6d189;
+    --accent-color: #40a02b;
+    --background-color: #fff;
     --bg-0: #f2f2f2;
     --highlight-bg: rgba(0, 0, 0, 2.5%);
     --content-padding: 20px;
@@ -29,8 +31,8 @@
 
     @media (prefers-color-scheme: dark) {
         --text-color: #fff;
-        --accent-color: #ec68aa;
-        --green: #40a02b;
+        --background-color: #121212;
+        --accent-color: #40a02b;
         --bg-0: rgba(255, 255, 255, 5%);
         --highlight-bg: rgba(255, 255, 255, 6%);
         --border-color: #2a2a2a;
@@ -43,16 +45,17 @@
 }
 
 :root {
-    font-family: 'Inter', sans-serif;
+    --sans-serif: 'Inter', sans-serif;
+    --serif: 'Vollkorn', serif;
+}
+
+:root {
+    font-family: var(--sans-serif);
     color-scheme: light dark;
     line-height: 1.4;
     color: var(--text-color);
-    background-color: #fff;
+    background-color: var(--background-color);
     -webkit-text-size-adjust: none; // Stop iOS Safari from adjusting the font size in landscape.
-
-    @media (prefers-color-scheme: dark) {
-        background-color: #121212;
-    }    
 
     @media (prefers-reduced-motion: no-preference) {
         scroll-behavior: smooth;
@@ -77,7 +80,7 @@
 
 ::selection {
     color: color-mix(in srgb, var(--accent-color), #000 80%);
-    background-color: color-mix(in srgb, var(--accent-color), #fff 40%);
+    background-color: color-mix(in srgb, var(--accent-color), #fff 70%);
 
     @media (prefers-color-scheme: dark) {
         color: color-mix(in srgb, var(--accent-color), #fff 90%);
@@ -168,7 +171,8 @@ strong.emoji {
     padding: 4px 1.5ch;
     border-radius: 1em;
     margin-right: 1ch;
-    background-color: var(--green);
+    background-color: var(--accent-color);
+    color: var(--background-color);
 }
 
 .badge,
