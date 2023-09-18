@@ -1,4 +1,3 @@
-@use '_stripes' as *;
 @import '_fonts';
 
 // Reset / Normalize
@@ -59,22 +58,6 @@
 
     @media (prefers-reduced-motion: no-preference) {
         scroll-behavior: smooth;
-    }
-}
-
-@media not print {
-    :root::before {
-        content: '';
-        position: fixed;
-        height: 4px;
-        width: 100%;
-        z-index: 100;
-
-        $colors: #e78284, #ef9f76, #e5c890, #a6d189, #8caaee, #ca9ee6;
-        @include stripes($colors, 0%);
-        @media (prefers-color-scheme: dark) {
-            @include stripes($colors, -40%);
-        }
     }
 }
 
