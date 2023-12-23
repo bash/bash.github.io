@@ -342,8 +342,7 @@ details[open] summary {
     font-weight: 700;
 }
 
-// TODO: Use figure:has(pre > code) once :has() is supported in Firefox
-figure.code-figure {
+figure:has(pre > code) {
     position: relative;
 
     figcaption {
