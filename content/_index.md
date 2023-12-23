@@ -16,6 +16,7 @@ story driven or puzzle games.
 
 ## Contact
 * GitHub: <https://github.com/bash>
+* Mastodon: [@tautropfli@hachyderm.io](https://hachyderm.io/@tautropfli)
 * Discord: tautropfli
 
 ## Favourite Emoji
