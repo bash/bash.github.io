@@ -44,7 +44,6 @@
 
 :root {
     --sans-serif: 'Inter', sans-serif;
-    --serif: 'Vollkorn', serif;
 }
 
 :root {
@@ -78,7 +77,6 @@
 
 h1, h2, h3 {
     font-weight: 800;
-    font-family: var(--serif);
 }
 
 // Block level elements get spacing afterwards
@@ -88,7 +86,7 @@ h1, h2, h3, p, ul, ol, pre, blockquote, details {
 
 h1 {
     font-size: 3rem;
-    line-height: 1.1;
+    line-height: 1.4;
 }
 
 h2 {
@@ -129,7 +127,6 @@ a {
     font-weight: inherit;
 
     &:hover {
-        text-underline-offset: -0.1em;
         text-decoration-thickness: 4px;
     }
 }
