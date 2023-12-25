@@ -19,8 +19,5 @@ story driven or puzzle games.
 * Mastodon: [@tautropfli@hachyderm.io](https://hachyderm.io/@tautropfli)
 * Discord: tautropfli
 
-## Favourite Emoji
-<strong class="emoji">✨</strong>
-
 
 [UZH]: https://www.uzh.ch/

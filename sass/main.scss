@@ -135,21 +135,6 @@ strong {
     font-weight: 700;
 }
 
-strong.emoji {
-    display: inline-flex;
-    font-size: 1.5rem;
-    background-color: var(--highlight-bg);
-    width: 3rem;
-    aspect-ratio: 1;
-    justify-content: center;
-    align-items: center;
-    border-radius: 100%;
-
-    @media (prefers-contrast: more) {
-        border: 1px solid var(--border-color);
-    }
-}
-
 .badge {
     font-size: .7rem;
     padding: 4px 1.5ch;
