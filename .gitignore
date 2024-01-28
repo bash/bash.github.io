@@ -1,3 +1,4 @@
 /public/
 /static/syntax-theme-*.css
 /content/reading-list.json
+/static/katex/

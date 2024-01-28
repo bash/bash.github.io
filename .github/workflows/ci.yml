@@ -19,6 +19,9 @@ jobs:
     - name: Update Reading List
       run: python ./update-reading-list.py
 
+    - name: Fetch KaTeX
+      run: ./fetch-katex.sh
+
     - name: Build Page
       run: zola build --output-dir _site
 

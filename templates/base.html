@@ -21,13 +21,15 @@
     {% block metadata %}{% endblock metadata %}
     <title>{% block title %}{% if page %}{{page.title}}{% elif section %}{{section.title}}{% else %}{{config.title}}{% endif %}{% endblock title %}</title>
 
-    <link rel="preload" as="font" href="{{ get_url(path="fonts/vollkorn/Vollkorn-ExtraBold.woff2") }}" crossorigin="anonymous">
     <link rel="preload" as="font" href="{{ get_url(path="fonts/inter/Inter.woff2") }}?v=3.19" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ get_url(path="main.css") }}" crossorigin="anonymous">
 
     {# Syntax Theme #}
     <link rel="stylesheet" type="text/css" href="{{ get_url(path="syntax-theme-dark.css") }}" media="(prefers-color-scheme: dark)">
     <link rel="stylesheet" type="text/css" href="{{ get_url(path="syntax-theme-light.css") }}" media="(prefers-color-scheme: light)">
+
+    {# KaTeX #}
+    <link rel="stylesheet" href="{{ get_url(path="katex/katex.min.css")}}">
 
     {# RSS #}
     {% for feed in config.extra.rss_feeds %}
@@ -48,15 +50,14 @@
         {% endblock main_content %}
     </main>
 
-    <script data-goatcounter="https://bash.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
-
-    <script>
-        window.MathJax = {
-            tex: {
-                inlineMath: [['$', '$'], ['\\(', '\\)']]
-            }
-        };
-        </script>
-    <script type="text/javascript" id="MathJax-script" defer src="{{ get_url(path="mathjax/tex-mml-chtml.js") }}"></script>
+    <script type="module">
+        import renderMathInElement from '{{ get_url(path="katex/contrib/auto-render.mjs") }}';
+        renderMathInElement(document.body, {
+            delimiters: [
+                { left: '$$', right: '$$', display: true },
+                { left: '$', right: '$', display: false },
+            ]
+        })
+    </script>
 </body>
 </html>
