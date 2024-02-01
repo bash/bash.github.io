@@ -2,7 +2,6 @@
 
 import requests
 import json
-from collections import defaultdict
 
 READING_LABEL = "reading"
 
@@ -10,7 +9,7 @@ READING_LABEL = "reading"
 def map_issue(issue):
     return {
         "title": issue["title"],
-        "body": issue["body"] or '',
+        "body": issue["body"] or "",
         "reading": any((label["name"] == READING_LABEL for label in issue["labels"])),
     }
 
