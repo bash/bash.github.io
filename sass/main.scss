@@ -48,15 +48,17 @@
 
 :root {
     --sans-serif: 'Inter', sans-serif;
+    --serif: 'Vollkorn', serif;
 }
 
 :root {
-    font-family: var(--sans-serif);
+    font-family: var(--serif);
     color-scheme: light dark;
     line-height: 1.4;
     color: var(--text-color);
     background-color: var(--background-color);
     -webkit-text-size-adjust: none; // Stop iOS Safari from adjusting the font size in landscape.
+    font-size: 1.125em;
 
     @media (prefers-reduced-motion: no-preference) {
         scroll-behavior: smooth;
@@ -80,6 +82,7 @@
 }
 
 h1, h2, h3 {
+    font-family: var(--sans-serif);
     font-weight: 800;
 }
 
@@ -111,6 +114,7 @@ header {
 
     // In an article header, the p acts as the lead text
     p {
+        font-family: var(--sans-serif);
         font-size: 1.3rem;
     }
 }
@@ -122,7 +126,6 @@ a {
 
     &:hover {
         text-decoration: underline;
-        text-underline-position: under;
         text-decoration-thickness: 2px;
     }
 }
