@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block metadata %}
+<link rel="stylesheet" type="text/css" href="{{ get_url(path="introduction.css") }}">
+{% endblock %}
+
+{% block main_content %}
+<div class="introduction-block">
+    <section>
+        <header>
+            <h1>Hi, I’m Tau!</h1>
+            <p>I love coding schtuff and doing maths.</p>
+        </header>
+
+        {{section.content | safe}}
+    </section>
+
+    <aside>
+        <figure>
+            <picture>
+                <source srcset="{{get_url(path='images/tau-dark.jpg')}}" media="(prefers-color-scheme: dark)">
+                <img src="{{get_url(path='images/tau-light.jpg')}}" alt="A picture of Tau">
+            </picture>
+            <figcaption>Figure 1: A Picture of Tau.</figcaption>
+        </figure>
+    </aside>
+</div>
+
+{% endblock main_content %}

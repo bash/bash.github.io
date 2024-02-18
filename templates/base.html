@@ -41,7 +41,10 @@
 
     <nav>
         {% for menu in config.extra.menu %}
-            <a href={{ menu.url }}>{{ menu.name }}</a>
+            {% if current_path %}
+                {% set current = menu.url == current_path or current_path is starting_with(menu.url ~ '/') %}
+            {% endif %}
+            <a href={{ menu.url }} {% if current %}class="-current" {% endif %}>{{ menu.name }}</a>
         {% endfor %}
     </nav>
     <main id="main">

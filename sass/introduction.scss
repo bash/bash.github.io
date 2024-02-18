@@ -1,0 +1,25 @@
+.introduction-block {
+    display: grid;
+    grid-template-columns: 1fr 200px;
+    align-items: start;
+    column-gap: 3rem;
+
+    aside {
+        margin-top: 4rem;
+    }
+    
+    img {
+        max-width: 100%;
+        width: 200px;
+        border-radius: 100%;
+    }
+
+    @media (max-width: 44rem) {
+        grid-template-columns: 1fr;
+
+        aside {
+            justify-self: center;
+            margin-top: 0;
+        }
+    }
+}

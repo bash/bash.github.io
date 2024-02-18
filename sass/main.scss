@@ -124,7 +124,8 @@ a {
     font-weight: 500;
     text-decoration: none;
 
-    &:hover {
+    &:hover,
+    &.-current {
         text-decoration: underline;
         text-decoration-thickness: 2px;
     }
@@ -269,10 +270,13 @@ main {
 
 nav {
     margin-top: 40px;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-auto-flow: column;
     gap: 0.625rem 1.25rem;
     padding: 0 var(--content-padding);
+
+    > .item.-prev { justify-self: start; }
+    > .item.-next { justify-self: end; }
 
     @media print {
         display: none;
@@ -349,6 +353,17 @@ figure:has(pre > code) {
 
     pre {
         padding-top: calc(var(--content-padding) + .75rem);
+    }
+}
+
+figure:has(img) {
+    display: grid;
+    grid-template-columns: max-content;
+    grid-gap: 1rem;
+    
+    figcaption {
+        font-size: .8rem;
+        text-align: center;
     }
 }
 

@@ -1,23 +1,16 @@
 +++
 title = "Tau's Website"
-[extra]
-markdown_title = "Tau's ~~Garden~~ Website"
+template = "introduction.html"
 +++
 
-Hey, I'm Tau. I'm interested in:
-* Software Development (Rust, C#, Web Stuffs, …)
-* Software Architecture (Clean Architecture, API Design)
-* Functional Programming
-* Parsers
+I'm studying mathematics at the [University of Zurich][UZH].
+In my spare time I enjoy coding on one of my many side projects. I love playing
+video games, especially puzzle and story
+driven ones.
 
-I'm currently studying mathematics at the [University of Zurich][UZH].
-In my spare time I enjoy working on side projects, contributing to open source and playing
-story driven or puzzle games.
+Every month or so I organize a [game night]
+for my friends and acquaintances from uni.
 
-## Contact
-* GitHub: <https://github.com/bash>
-* Mastodon: [@tautropfli@hachyderm.io](https://hachyderm.io/@tautropfli)
-* Discord: tautropfli
-
-
-[UZH]: https://www.uzh.ch/
+            
+[UZH]: https://uzh.ch
+[game night]: https://game-night.tau.garden
