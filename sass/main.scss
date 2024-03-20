@@ -13,7 +13,7 @@
 :root {
     --text-color: #000;
     --accent-color: #40a02b;
-    --link-color: #3765B2;
+    --link-color: color-mix(in oklch, var(--accent-color), #000 15%);
     --background-color: #fff8f1;
     --background-color-1: #fff;
     --bg-0: #f2f2f2;
@@ -32,7 +32,7 @@
 
     @media (prefers-color-scheme: dark) {
         --text-color: #fff;
-        --link-color: rgb(117, 151, 211);
+        --link-color: color-mix(in oklch, var(--accent-color), #fff 15%);
         --background-color: #121212;
         --background-color-1: #000;
         --bg-0: rgba(255, 255, 255, 5%);
@@ -54,6 +54,7 @@
 :root {
     font-family: var(--serif);
     color-scheme: light dark;
+    accent-color: var(--accent-color);
     line-height: 1.4;
     color: var(--text-color);
     background-color: var(--background-color);
@@ -63,6 +64,15 @@
     @media (prefers-reduced-motion: no-preference) {
         scroll-behavior: smooth;
     }
+}
+
+*:focus {
+    outline: none;
+}
+
+*:focus-visible {
+    outline: auto;
+    outline-offset: 2px;
 }
 
 ::selection {
@@ -180,15 +190,12 @@ ul, ol {
     padding: 0;
 }
 
-hr {
-    margin: var(--inter-section-gap) 0;
-    text-align: center;
-
+%fleuron {
     &::before {
         content: '';
         display: inline-block;
-        width: 3rem;
-        height: 1.5rem;
+        width: 2em;
+        height: 1em;
         background-color: currentColor;
         -webkit-mask-image: url(/fleuron.svg);
         -webkit-mask-size: contain;
@@ -199,6 +206,14 @@ hr {
         mask-position: center;
         mask-repeat: no-repeat;
     }
+}
+
+hr {
+    margin: var(--inter-section-gap) 0;
+    text-align: center;
+    font-size: 1.5rem; // Controls the size of the fleuron
+
+    @extend %fleuron;
 }
 
 // Nested lists need to be indented
@@ -259,17 +274,48 @@ blockquote + ul li:only-child {
 
 body {
     display: grid;
-    grid-template-columns: minmax(0, var(--content-max-width));
+    grid-template-columns: 1fr minmax(0, var(--content-max-width)) 1fr;
+    grid-template-rows: max-content 1fr max-content;
     align-content: start;
     justify-content: center;
+    min-height: 100svh;
 }
 
 main {
     margin-trim: all;
-    padding: 0 var(--content-padding) var(--content-padding) var(--content-padding);
+    padding: 0 var(--content-padding) calc(var(--content-padding) * 2) var(--content-padding);
+    grid-column: 2;
+}
+
+footer {
+    grid-column: 1 / 4;
+    background-color: color-mix(in oklab, var(--background-color), var(--accent-color) 10%);
+    padding: .5rem var(--content-padding);
+    display: grid;
+    grid-template-columns: minmax(0, var(--content-max-width));
+    justify-content: center;
+
+    @media (hover: hover) and (not (prefers-contrast: more)) {
+        .footer-content {
+            transition: opacity 125ms ease-in-out;
+        }
+
+        &:not(:is(:hover, :focus-within)) .footer-content {
+            opacity: .2;
+        }
+    }
+}
+
+.footer-content {
+    @extend %fleuron;
+
+    &::before {
+        vertical-align: middle;
+    }
 }
 
 nav {
+    grid-column: 2;
     margin-top: 40px;
     display: grid;
     grid-auto-flow: column;

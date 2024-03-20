@@ -52,7 +52,11 @@
             Nothing here?!
         {% endblock main_content %}
     </main>
-
+    <footer>
+        <div class="footer-content">
+            a website by <a href="/">Tau</a>
+        </div>
+    </footer>
     <script type="module">
         import renderMathInElement from '{{ get_url(path="katex/contrib/auto-render.mjs") }}';
         renderMathInElement(document.body, {
