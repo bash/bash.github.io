@@ -13,7 +13,7 @@
 :root {
     --text-color: #000;
     --accent-color: #40a02b;
-    --link-color: color-mix(in oklch, var(--accent-color), #000 15%);
+    --link-color: color-mix(in oklab, var(--accent-color), #000 15%);
     --background-color: #fff8f1;
     --background-color-1: #fff;
     --bg-0: #f2f2f2;
@@ -32,7 +32,7 @@
 
     @media (prefers-color-scheme: dark) {
         --text-color: #fff;
-        --link-color: color-mix(in oklch, var(--accent-color), #fff 15%);
+        --link-color: color-mix(in oklab, var(--accent-color), #fff 15%);
         --background-color: #121212;
         --background-color-1: #000;
         --bg-0: rgba(255, 255, 255, 5%);
@@ -76,12 +76,12 @@
 }
 
 ::selection {
-    color: color-mix(in oklch, var(--accent-color), #000 80%);
-    background-color: color-mix(in oklch, var(--accent-color), #fff 70%);
+    color: color-mix(in oklab, var(--accent-color), #000 80%);
+    background-color: color-mix(in oklab, var(--accent-color), #fff 70%);
 
     @media (prefers-color-scheme: dark) {
-        color: color-mix(in oklch, var(--accent-color), #fff 90%);
-        background-color: color-mix(in oklch, var(--accent-color), #000 40%);
+        color: color-mix(in oklab, var(--accent-color), #fff 90%);
+        background-color: color-mix(in oklab, var(--accent-color), #000 40%);
     }
 }
 
