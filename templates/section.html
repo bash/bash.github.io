@@ -11,7 +11,7 @@
 {% endif -%}
 
 <ul>
-    {% for page in show_pages %}
+    {% for page in show_pages | reverse() %}
         <section class="list-item">
             <h2 class="title">
                 {% if page.draft %}<span class="badge">draft</span>{% endif %}
