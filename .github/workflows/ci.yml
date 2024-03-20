@@ -16,14 +16,8 @@ jobs:
       with:
         tool: zola@0.18.0
 
-    - name: Update Reading List
-      run: python ./update-reading-list.py
-
-    - name: Fetch KaTeX
-      run: ./fetch-katex.sh
-
-    - name: Build Page
-      run: zola build --output-dir _site
+    - name: Build Site
+      run: make build
 
     - name: Upload GitHub Pages Artifact
       uses: actions/upload-pages-artifact@v1
