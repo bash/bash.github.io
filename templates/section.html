@@ -14,7 +14,7 @@
     {% for page in show_pages %}
         <section class="list-item">
             <h2 class="title">
-                {% if page.draft %}DRAFT{% endif %}
+                {% if page.draft %}<span class="badge">draft</span>{% endif %}
                 <a href={{ page.permalink }}>{{page.title}}</a>
             </h2>
 
