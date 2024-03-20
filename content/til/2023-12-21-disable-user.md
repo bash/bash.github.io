@@ -7,7 +7,7 @@ After digging around in [AccountManager]'s source code for a bit
 I figured that the easiest way to hide/disable a user in the login screen
 is to change the shell to `/sbin/nologin`:
 
-```shell
+```sh
 sudo chsh -s /sbin/nologin USERNAME
 ```
 
