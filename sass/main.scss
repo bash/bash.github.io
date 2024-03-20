@@ -284,27 +284,6 @@ nav {
     }
 }
 
-.card-list {
-    list-style-type: none;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-gap: var(--content-padding);
-
-    @media (max-width: 600px) {
-        grid-template-columns: 1fr;
-    }
-}
-
-.card-list > li {
-    border: 1px solid var(--border-color);
-    border-radius: .5em;
-    padding: var(--content-padding);
-}
-
-.card-list > li > :first-child {
-    margin-top: 0;
-}
-
 .footnote-definition {
     &::before {
         content: '';

@@ -17,7 +17,6 @@ menu = [
     { name = "Home", url = "/" },
     { name = "Blog", url = "/blog" },
     { name = "TIL", url = "/til" },
-    { name = "Projects", url = "/projects" },
     { name = "Reading", url = "/reading-list" },
 ]
 
