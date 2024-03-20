@@ -66,12 +66,12 @@
 }
 
 ::selection {
-    color: color-mix(in srgb, var(--accent-color), #000 80%);
-    background-color: color-mix(in srgb, var(--accent-color), #fff 70%);
+    color: color-mix(in oklch, var(--accent-color), #000 80%);
+    background-color: color-mix(in oklch, var(--accent-color), #fff 70%);
 
     @media (prefers-color-scheme: dark) {
-        color: color-mix(in srgb, var(--accent-color), #fff 90%);
-        background-color: color-mix(in srgb, var(--accent-color), #000 40%);
+        color: color-mix(in oklch, var(--accent-color), #fff 90%);
+        background-color: color-mix(in oklch, var(--accent-color), #000 40%);
     }
 }
 
