@@ -1,0 +1,7 @@
+{
+  "name": "bash.github.io",
+  "private": true,
+  "dependencies": {
+    "lightningcss-cli": "^1.24.1"
+  }
+}

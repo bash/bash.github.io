@@ -196,10 +196,6 @@ ul, ol {
         width: 2em;
         height: 1em;
         background-color: currentColor;
-        -webkit-mask-image: url(/fleuron.svg);
-        -webkit-mask-size: contain;
-        -webkit-mask-position: center;
-        -webkit-mask-repeat: no-repeat;
         mask-image: url(/fleuron.svg);
         mask-size: contain;
         mask-position: center;

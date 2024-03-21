@@ -2,3 +2,5 @@
 /static/syntax-theme-*.css
 /content/reading-list.json
 /static/katex/
+/_site/
+/node_modules/
