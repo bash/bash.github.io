@@ -7,7 +7,7 @@ function minify() {
     npx lightningcss --minify --browserslist "$1" -o "$1"
 }
 
-python ./update-reading-list.py
+./update-reading-list.py
 ./fetch-katex.sh
 npm clean-install
 
