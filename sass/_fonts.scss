@@ -44,3 +44,12 @@
   font-display: swap;
   src: url('./fonts/jetbrains-mono/JetBrainsMono.woff2') format('woff2');
 }
+
+@font-face {
+  font-family: 'Jetbrains Mono';
+  font-weight: 100 900;
+  font-style: italic;
+  font-stretch: normal;
+  font-display: swap;
+  src: url('./fonts/jetbrains-mono/JetBrainsMono-Italic.woff2') format('woff2');
+}
