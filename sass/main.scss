@@ -48,11 +48,11 @@
 
 :root {
     --sans-serif: 'Inter', sans-serif;
-    --serif: 'Vollkorn', serif;
+    --monospace: 'Jetbrains Mono', ui-monospace, monospace;
 }
 
 :root {
-    font-family: var(--serif);
+    font-family: var(--sans-serif);
     color-scheme: light dark;
     accent-color: var(--accent-color);
     line-height: 1.4;
@@ -133,20 +133,19 @@ a {
     color: var(--link-color);
     text-decoration: none;
 
-    &:hover,
-    &.-current {
+    &:hover {
         text-decoration: underline;
-        text-decoration-thickness: 2px;
+        text-underline-offset: .3em;
+        text-decoration-thickness: .2ex;
+    }
+
+    &.-current {
+        font-weight: bold;
     }
 }
 
 :is(h1, h2, h3) a {
     font-weight: inherit;
-
-    &:hover {
-        text-decoration-thickness: 4px;
-        text-underline-offset: .3em;
-    }
 }
 
 strong {
@@ -226,8 +225,7 @@ code {
     background-color: var(--bg-0);
     border-radius: 0.1em 0.2em;
     padding: 0 0.25em;
-    font-family: 'Jetbrains Mono', ui-monospace, monospace;
-    font-size: 0.8em; // Jetbrains Mono appears bit bigger than Vollkorn
+    font-family: var(--monospace);
 }
 
 pre code,
@@ -289,6 +287,7 @@ footer {
     display: grid;
     grid-template-columns: minmax(0, var(--content-max-width));
     justify-content: center;
+    font-size: .8em;
 
     @media (hover: hover) and (not (prefers-contrast: more)) {
         .footer-content {

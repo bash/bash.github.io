@@ -1,8 +1,9 @@
 @font-face {
-  font-family: 'Inter';
+  font-family: Inter;
+  font-style: normal;
   font-weight: 100 900;
   font-display: swap;
-  font-style: oblique 0deg 10deg;
+  src: url('fonts/inter/InterVariable.woff2?v=4.0') format('woff2');
   // case = Case alternates
   // cv02 = Open four
   // cv03 = Open six
@@ -14,70 +15,32 @@
   // ss03 = Round quotes & comma
   // zero = Slashed Zero
   font-feature-settings: "case", "cv02", "cv03", "cv04", "cv05", "cv08", "cv11", "dlig", "ss03", "zero";
-  src: url("fonts/inter/Inter.woff2?v=3.19") format("woff2");
 }
 
 @font-face {
-  font-family: 'Vollkorn';
-  font-weight: 400;
-  font-style: normal;
-  font-stretch: normal;
-  font-display: swap;
-  // dlig = Discretionary Ligatures
-  font-feature-settings: "dlig";
-  src: url('./fonts/vollkorn/Vollkorn-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Vollkorn';
-  font-weight: 400;
+  font-family: Inter;
   font-style: italic;
-  font-stretch: normal;
+  font-weight: 100 900;
   font-display: swap;
-  src: url('./fonts/vollkorn/Vollkorn-Italic.woff2') format('woff2');
+  src: url('fonts/inter/InterVariable-Italic.woff2?v=4.0') format('woff2');
+  // case = Case alternates
+  // cv02 = Open four
+  // cv03 = Open six
+  // cv04 = Open nine
+  // cv05 = Lower-case L with tail
+  // cv08 = Upper-case i with serif
+  // cv11 = Single-storey a
+  // dlig = Discretionary ligatures
+  // ss03 = Round quotes & comma
+  // zero = Slashed Zero
+  font-feature-settings: "case", "cv02", "cv03", "cv04", "cv05", "cv08", "cv11", "dlig", "ss03", "zero";
 }
 
 @font-face {
-  font-family: 'Vollkorn';
-  font-weight: 700;
+  font-family: 'Jetbrains Mono';
+  font-weight: 100 900;
   font-style: normal;
   font-stretch: normal;
   font-display: swap;
-  src: url('./fonts/vollkorn/Vollkorn-Bold.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Jetbrains Mono';
-  font-weight: 400;
-  font-style: normal;
-  font-stretch: normal;
-  font-display: swap;
-  src: url('./fonts/jetbrains-mono/JetBrainsMono-Regular.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Jetbrains Mono';
-  font-weight: 400;
-  font-style: italic;
-  font-stretch: normal;
-  font-display: swap;
-  src: url('./fonts/jetbrains-mono/JetBrainsMono-Italic.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Jetbrains Mono';
-  font-weight: 800;
-  font-style: normal;
-  font-stretch: normal;
-  font-display: swap;
-  src: url('./fonts/jetbrains-mono/JetBrainsMono-ExtraBold.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Jetbrains Mono';
-  font-weight: 800;
-  font-style: italic;
-  font-stretch: normal;
-  font-display: swap;
-  src: url('./fonts/jetbrains-mono/JetBrainsMono-ExtraBoldItalic.woff2') format('woff2');
+  src: url('./fonts/jetbrains-mono/JetBrainsMono.woff2') format('woff2');
 }
