@@ -132,11 +132,15 @@ header {
 a {
     color: var(--link-color);
     text-decoration: none;
+    text-underline-offset: .3em;
+    text-decoration-thickness: .2ex;
+
+    @media (hover: none) {
+        text-decoration-line: underline;
+    }
 
     &:hover {
-        text-decoration: underline;
-        text-underline-offset: .3em;
-        text-decoration-thickness: .2ex;
+        text-decoration-line: underline;
     }
 
     &.-current {
