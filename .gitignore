@@ -4,3 +4,4 @@
 /static/katex/
 /_site/
 /node_modules/
+/.venv/
