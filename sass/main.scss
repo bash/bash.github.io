@@ -192,6 +192,16 @@ ul, ol {
     padding: 0;
 }
 
+.post-list {
+    list-style-type: none;
+
+    > .post {
+        &:has(.description) { margin-bottom: 1lh; }
+        > time { font-variant-numeric: tabular-nums; }
+        > .description { display: block; }
+    }
+}
+
 %fleuron {
     &::before {
         content: '';
@@ -354,10 +364,6 @@ nav {
 
 details[open] summary {
     margin-bottom: .5em;
-}
-
-.list-item > .meta > .author {
-    font-weight: 700;
 }
 
 figure:has(pre > code) {

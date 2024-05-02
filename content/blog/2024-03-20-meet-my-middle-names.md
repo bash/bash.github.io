@@ -1,6 +1,5 @@
 +++
 title = "Meet My Middle Names"
-authors = ["Tau"]
 description = "I describe my middle names as individual people to help me focus on the positives of changing my legal name."
 +++
 

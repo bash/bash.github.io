@@ -1,6 +1,5 @@
 +++
 title = "Disable User in GNOME Login Screen"
-authors = ["Tau"]
 +++
 
 After digging around in [AccountManager]'s source code for a bit

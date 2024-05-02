@@ -1,6 +1,5 @@
 +++
 title = "SQLite rowid as Foreign Key"
-authors = ["Tau"]
 +++
 
 I was really excited [when I first learned](@/til/2022-10-23-sqlite-rowid.md) about SQLite's `rowid` feature.

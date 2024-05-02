@@ -1,7 +1,6 @@
 +++
 title = "Markdown"
 description = "Here goes a short description or subtitle for this page"
-authors = ["Tau"]
 draft = true
 +++
 

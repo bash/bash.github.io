@@ -10,34 +10,21 @@
     {%- set show_pages = section.pages -%}
 {% endif -%}
 
-<ul>
+<ul class="post-list">
     {% for page in show_pages %}
-        <section class="list-item">
-            <h2 class="title">
-                {% if page.draft %}<span class="badge">draft</span>{% endif %}
-                <a href={{ page.permalink }}>{{page.title}}</a>
-            </h2>
+        <li class="post">
+            {%- if page.date %}
+            <time>{{ page.date | date(format="%Y-%m-%d") }}</time>
+            {% endif -%}
 
-            <p class="description">
-                {% if page.description %}
-                    {{ page.description }}
-                {% elif page.summary %}
-                    {{ page.summary | safe }}&hellip;
-                {% endif %}
-            </p>
+            <a href="{{ page.permalink }}">{{page.title}}</a>
 
-            <div class="meta">
-                {% set author = page.authors | first() %}
-                {% if author %}
-                    <span class="author">{{author}}</span>
-                {% endif %}
-
-                {%- if page.date %}
-                    posted on <time>{{ page.date | date(format="%Y-%m-%d") }}</time>
-                {% endif -%}
-            </div>
-        </section>
-
+            {% if page.description %}
+                <span class="description">{{ page.description }}</span>
+            {% elif page.summary %}
+                <span class="description">{{ page.summary | safe }}&hellip;</span>
+            {% endif %}
+        </li>
     {% endfor %}
 </ul>
 {% endblock main_content %}

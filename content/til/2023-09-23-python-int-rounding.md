@@ -1,6 +1,5 @@
 +++
 title = "Python's int(x) Rounds Towards Zero"
-authors = ["Tau"]
 +++
 
 I was surprised to learn that Python's [`int`] function rounds floats towards zero. \
