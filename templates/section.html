@@ -13,6 +13,10 @@
 <ul class="post-list">
     {% for page in show_pages %}
         <li class="post">
+            {%- if page.draft %}
+                <strong>*</strong>
+            {% endif -%}
+
             {%- if page.date %}
             <time>{{ page.date | date(format="%Y-%m-%d") }}</time>
             {% endif -%}
