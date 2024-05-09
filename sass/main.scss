@@ -187,13 +187,21 @@ del {
     text-decoration-thickness: .1em;
 }
 
-ul, ol {
-    list-style-position: inside;
-    padding: 0;
+ol {
+    padding-inline-start: 3ch;
+}
+
+ul {
+    padding-inline-start: 1.5ch;
+}
+
+:is(ul, ol) :is(ul, ol) {
+    margin-bottom: 0;
 }
 
 .post-list {
     list-style-type: none;
+    padding: 0;
 
     > .post {
         &:has(.description) { margin-bottom: 1lh; }
@@ -222,12 +230,6 @@ hr {
     font-size: 1.5rem; // Controls the size of the fleuron
 
     @extend %fleuron;
-}
-
-// Nested lists need to be indented
-:is(ul, ol) :is(ul, ol) {
-    padding-left: 1em;
-    margin-bottom: 0;
 }
 
 blockquote {
