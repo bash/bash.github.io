@@ -8,10 +8,13 @@ TEMPLATES := $(shell find templates -type f)
 STATICS := $(shell find static -type f)
 KATEX_FILES := katex.mjs contrib/auto-render.mjs katex.min.css fonts/KaTeX_Main-Regular.woff2 fonts/KaTeX_Math-Italic.woff2
 KATEX_OUTPUT_FILES := $(addprefix static/katex/,$(KATEX_FILES))
+SATELLITE_PAGES := $(wildcard satellite-pages/*)
+SATELLITE_PAGES_HTML := $(patsubst satellite-pages/%,public/%/index.html,$(SATELLITE_PAGES))
 
+.SECONDARY: # Do not delete intermediate files
 .PHONY: all watch serve publish
 
-all: $(ZOLA_SENTINEL)
+all: $(ZOLA_SENTINEL) $(SATELLITE_PAGES_HTML)
 
 $(ZOLA_SENTINEL): $(CONTENT_FILES) $(SASS_FILES) $(TEMPLATES) $(STATICS) $(READING_LIST) $(NPM_SENTINEL) $(KATEX_OUTPUT_FILES) config.toml browserslist
 ifeq ($(ZOLA_PUBLISH), true)
@@ -43,3 +46,10 @@ $(READING_LIST):
 static/katex/%: $(NPM_SENTINEL)
 	@mkdir -p $(dir $@)
 	cp node_modules/katex/dist/$* $@
+
+satellite-pages/%/readme.md: satellite-pages/%/url
+	wget -O $@ $$(cat $<)
+
+public/%/index.html: satellite-pages/%/readme.md
+	@mkdir -p $(dir $@)
+	seite $< --template templates/satellite-page.html --output $@

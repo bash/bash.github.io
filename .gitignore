@@ -5,3 +5,4 @@
 /_site/
 /node_modules/
 /.zola-sentinel
+/satellite-pages/**/*.md

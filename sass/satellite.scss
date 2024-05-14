@@ -1,0 +1,242 @@
+* {
+    font: inherit;
+    color: inherit;
+    border: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: system-ui, sans-serif;
+    color-scheme: dark light;
+    line-height: 1.4;
+    font-size: 1.125em;
+    accent-color: var(--accent-color);
+
+    @media (prefers-reduced-motion: no-preference) {
+        scroll-behavior: smooth;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        background-color: var(--background-color);
+        color: #fff;
+    }    
+}
+
+:root {
+    --background-color: #fff;
+    --accent-color: #40a02b;
+    --border-color: #e7e1da;
+    --highlight-bg: rgba(0, 0, 0, 2.5%);
+    --link-color: color-mix(in oklab, var(--accent-color), #000 15%);
+    --content-max-width: 50rem;
+    --text-max-width: 40rem;
+
+    @media (prefer-contrast: more) {
+        --border-color: #373737;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        --background-color: #121212;
+        --border-color: #2a2a2a;
+        --highlight-bg: rgba(255, 255, 255, 6%);
+        --link-color: color-mix(in oklab, var(--accent-color), #fff 15%);
+    }
+
+    @media (prefers-color-scheme: dark) and (prefers-contrast: more) {
+        --border-color: #fff;
+    }
+}
+
+::selection {
+    color: color-mix(in oklab, var(--accent-color), #000 80%);
+    background-color: color-mix(in oklab, var(--accent-color), #fff 70%);
+
+    @media (prefers-color-scheme: dark) {
+        color: color-mix(in oklab, var(--accent-color), #fff 90%);
+        background-color: color-mix(in oklab, var(--accent-color), #000 40%);
+    }
+}
+
+@supports selector(*:focus-within) {
+    *:focus {
+        outline: none;
+    }
+    
+    *:focus-visible {
+        outline: auto;
+        outline-offset: 2px;
+    }
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, var(--content-max-width)) 1fr;
+    grid-template-rows: 1fr max-content;
+    align-content: start;
+    justify-content: center;
+    min-height: 100svh;
+}
+
+main {
+    grid-column: 2;
+    margin: auto;
+    width: 100%;
+    padding: 3rem 1rem;
+}
+
+// Block level elements get spacing afterwards
+h1, h2, h3, p, ul, ol, details {
+    margin-bottom: 1rem;
+}
+
+h1, h2, h3, p, ul, ol {
+    max-width: var(--text-max-width);
+}
+
+// .. but tables need some extra space
+table {
+    margin: 1.4rem 0;
+}
+
+h1, h2, h3 {
+    font-weight: 800;
+}
+
+h1 {
+    font-size: 2.4rem;
+    line-height: 1.4;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+a {
+    color: var(--link-color);
+}
+
+code {
+    font-family: ui-monospace, monospace;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 1px solid var(--border-color);
+    padding: 6px 12px;
+}
+
+th {
+    font-weight: 700;
+}
+
+tr:nth-child(2n) td {
+    background-color: var(--highlight-bg);
+}
+
+ol {
+    padding-inline-start: 3ch;
+}
+
+ul {
+    padding-inline-start: 1.5ch;
+}
+
+strong {
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+sup {
+    font-variant-position: super;
+}
+
+sub {
+    font-variant-position: sub;
+}
+
+del {
+    text-decoration-thickness: .1em;
+}
+
+footer {
+    grid-column: 1 / 4;
+    display: grid;
+    grid-template-columns: subgrid;
+    justify-content: center;
+    background-color: color-mix(in oklab, var(--background-color), var(--accent-color) 10%);
+    padding: .5rem 1rem;
+    display: grid;
+    font-size: .8em;
+
+    .footer-content {
+        grid-column: 2;
+    }
+
+    @media (hover: hover) and (not (prefers-contrast: more)) {
+        .footer-content {
+            transition: opacity 125ms ease-in-out;
+        }
+
+        &:not(:is(:hover, :focus-within)) .footer-content {
+            opacity: .2;
+        }
+    }
+}
+
+%fleuron {
+    &::before {
+        content: '';
+        display: inline-block;
+        width: 2em;
+        height: 1em;
+        background-color: currentColor;
+        mask-image: url(fleuron.svg);
+        mask-size: contain;
+        mask-position: center;
+        mask-repeat: no-repeat;
+    }
+}
+
+.footer-content {
+    @extend %fleuron;
+
+    &::before {
+        vertical-align: middle;
+    }
+}
+
+.footnote-definition {
+    &::before {
+        content: '';
+        border-top: 2px solid var(--border-color);
+        display: block;
+        width: 100%;
+        max-width: 300px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    & > sup {
+        float: left;
+        margin-right: .5em;
+    }
+}
+
+// Only show divider for first footnote
+.footnote-definition + .footnote-definition {
+    &::before {
+        content: none;
+    }
+}
