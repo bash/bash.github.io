@@ -24,6 +24,3 @@ rss_feeds = [
   { name = "Blog", url = "/blog/atom.xml" },
   { name = "TIL", url = "/til/atom.xml" },
 ]
-
-mathjax = true
-mathjax_dollar_inline_enable = true

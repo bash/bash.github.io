@@ -8,17 +8,16 @@ TEMPLATES := $(shell find templates -type f)
 STATICS := $(shell find static -type f)
 KATEX_FILES := katex.mjs contrib/auto-render.mjs katex.min.css fonts/KaTeX_Main-Regular.woff2 fonts/KaTeX_Math-Italic.woff2
 KATEX_OUTPUT_FILES := $(addprefix static/katex/,$(KATEX_FILES))
-KATEX_SOURCE_FILES := $(addprefix node_modules/katex/dist/,$(KATEX_FILES))
 
 .PHONY: all watch serve publish
 
 all: $(ZOLA_SENTINEL)
 
 $(ZOLA_SENTINEL): $(CONTENT_FILES) $(SASS_FILES) $(TEMPLATES) $(STATICS) $(READING_LIST) $(NPM_SENTINEL) $(KATEX_OUTPUT_FILES) config.toml browserslist
-ifeq ($(ZOLA_DRAFTS), false)
+ifeq ($(ZOLA_PUBLISH), true)
 	zola build
 else
-	zola build --drafts
+	zola build --drafts --base-url http://localhost:1111
 endif
 	./make-scripts/minify-css.bash public
 	@touch $(ZOLA_SENTINEL)
@@ -30,7 +29,7 @@ serve:
 	python3 -m http.server -d public 1111
 
 publish:
-	ZOLA_DRAFTS=false $(MAKE) -B
+	ZOLA_PUBLISH=true $(MAKE) -B
 	@rm -rf _site/
 	cp -r public _site
 
@@ -43,4 +42,4 @@ $(READING_LIST):
 
 static/katex/%: $(NPM_SENTINEL)
 	@mkdir -p $(dir $@)
-	cp $< $@
+	cp node_modules/katex/dist/$* $@

@@ -21,7 +21,6 @@
     {% block metadata %}{% endblock metadata %}
     <title>{% block title %}{% if page %}{{page.title}}{% elif section %}{{section.title}}{% else %}{{config.title}}{% endif %}{% endblock title %}</title>
 
-    <link rel="preload" as="font" href="{{ get_url(path="fonts/inter/Inter.woff2") }}?v=3.19" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="{{ get_url(path="main.css") }}" crossorigin="anonymous">
 
     {# Syntax Theme #}
