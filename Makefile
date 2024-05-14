@@ -41,6 +41,6 @@ $(NPM_SENTINEL): package.json package-lock.json
 $(READING_LIST):
 	./make-scripts/reading-list.bash > $@
 
-static/katex/%: node_modules/katex/dist/%
+static/katex/%: node_modules/katex/dist/% $(NPM_SENTINEL)
 	@mkdir -p $(dir $@)
 	cp $< $@
