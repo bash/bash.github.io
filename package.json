@@ -2,6 +2,7 @@
   "name": "bash.github.io",
   "private": true,
   "dependencies": {
+    "katex": "^0.16.10",
     "lightningcss-cli": "^1.24.1"
   }
 }

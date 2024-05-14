@@ -21,7 +21,7 @@ jobs:
         tool: zola@0.18.0
 
     - name: Build Site
-      run: make build
+      run: make publish
 
     - name: Upload GitHub Pages Artifact
       uses: actions/upload-pages-artifact@v1
