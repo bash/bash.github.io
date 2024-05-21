@@ -6,9 +6,34 @@
   <meta name="color-scheme" content="light dark">
   <title>{{title}}</title>
   <link rel="stylesheet" href="/satellite.css" type="text/css">
+  {% if math %}
+  <link rel="stylesheet" href="/katex/katex.min.css" type="text/css">
+  {% endif %}
 </head>
 <body>
 <main>{{content | safe}}</main>
-<footer><div class="footer-content">a website by <a href="https://tau.garden">Tau</a></div></footer>
+<footer>
+  <div class="footer-content">a website by <a href="https://tau.garden">Tau</a>
+    {% if metadata.repository_url %}
+      ·
+      <a href="{{metadata.repository_url}}">source code</a>
+    {% endif %}
+    {% if metadata.cc0 %}
+      ·
+      <a href="https://creativecommons.org/publicdomain/zero/1.0/">CC0</a> 🄍
+    {% endif %}
+  </div>
+</footer>
+{% if math %}
+<script type="module">
+  import katex from '/katex/katex.mjs'
+  for (const element of document.querySelectorAll('.math')) {
+    katex.render(element.innerText, element, {
+      throwOnError: false,
+      displayMode: element.classList.contains('math-display')
+    })
+  }
+</script>
+{% endif %}
 </body>
 </html>

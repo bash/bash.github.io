@@ -1,3 +1,5 @@
+@import '_fonts';
+
 * {
     font: inherit;
     color: inherit;
@@ -8,7 +10,7 @@
 }
 
 :root {
-    font-family: system-ui, sans-serif;
+    font-family: Inter, system-ui, sans-serif;
     color-scheme: dark light;
     line-height: 1.4;
     font-size: 1.125em;

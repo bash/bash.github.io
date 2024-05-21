@@ -47,9 +47,9 @@ static/katex/%: $(NPM_SENTINEL)
 	@mkdir -p $(dir $@)
 	cp node_modules/katex/dist/$* $@
 
-satellite-pages/%/readme.md: satellite-pages/%/url
-	wget -O $@ $$(cat $<)
+satellite-pages/%/readme.md: satellite-pages/%/metadata.json
+	wget -O $@ $$(jq -r .raw_url $<)
 
-public/%/index.html: satellite-pages/%/readme.md
+public/%/index.html: satellite-pages/%/readme.md satellite-pages/%/metadata.json templates/satellite-page.html
 	@mkdir -p $(dir $@)
-	seite $< --template templates/satellite-page.html --output $@
+	seite $< --template $(word 3, $^) --output $@ --metadata "$$(cat $(word 2, $^))"
