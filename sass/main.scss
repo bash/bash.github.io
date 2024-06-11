@@ -286,19 +286,20 @@ body {
     display: grid;
     grid-template-columns: 1fr minmax(0, var(--content-max-width)) 1fr;
     grid-template-rows: max-content 1fr max-content;
+    grid-template-areas: '. nav .' '. content .' 'footer footer footer';
     align-content: start;
     justify-content: center;
     min-height: 100svh;
 }
 
 main {
+    grid-area: content;
     margin-trim: all;
     padding: 0 var(--content-padding) calc(var(--content-padding) * 2) var(--content-padding);
-    grid-column: 2;
 }
 
 footer {
-    grid-column: 1 / 4;
+    grid-area: footer;
     background-color: color-mix(in oklab, var(--background-color), var(--accent-color) 10%);
     padding: .5rem var(--content-padding);
     display: grid;
@@ -326,7 +327,7 @@ footer {
 }
 
 nav {
-    grid-column: 2;
+    grid-area: nav;
     margin-top: 40px;
     display: grid;
     grid-auto-flow: column;
