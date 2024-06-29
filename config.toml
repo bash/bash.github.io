@@ -20,7 +20,4 @@ menu = [
     { name = "Reading", url = "/reading-list" },
 ]
 
-rss_feeds = [
-  { name = "Blog", url = "/blog/atom.xml" },
-  { name = "TIL", url = "/til/atom.xml" },
-]
+feeds = ['blog/_index.md', 'til/_index.md']

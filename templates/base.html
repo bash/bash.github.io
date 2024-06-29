@@ -31,8 +31,16 @@
     <link rel="stylesheet" href="{{ get_url(path="katex/katex.min.css")}}">
 
     {# RSS #}
-    {% for feed in config.extra.rss_feeds %}
-    <link rel="alternate" type="application/atom+xml" title="{{feed.name}}" href="{{ get_url(path=feed.url, trailing_slash=false) }}">
+    {% for feed in config.extra.feeds %}
+        {% set section = get_section(path=feed, metadata_only=true) %}
+        {% if not section.generate_feeds %}
+            {{ throw(message="Section '" ~ section.path ~ "' doesn't have feeds enabled") }}
+        {% endif %}
+        {% for filename in config.feed_filenames %}
+            <link rel="alternate" type="application/atom+xml"
+                  title="{{section.title}}"
+                  href="{{ get_url(path=section.path ~ filename, trailing_slash=false) }}">
+        {% endfor %}
     {% endfor %}
 </head>
 <body>
