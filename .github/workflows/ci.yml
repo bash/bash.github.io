@@ -23,7 +23,7 @@ jobs:
 
     - uses: taiki-e/install-action@v2
       with:
-        tool: zola@0.18.0
+        tool: zola@0.19.1
 
     - run: wget https://github.com/bash/seite/releases/download/0.1.2/x86_64-unknown-linux-musl.tar.gz
     - run: tar -xvf x86_64-unknown-linux-musl.tar.gz
