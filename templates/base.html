@@ -13,7 +13,8 @@
     <link rel="icon" sizes="512x512" href="{{ get_url(path="favicon-512x512.png") }}" type="image/png">
     <link rel="apple-touch-icon" href="{{ get_url(path="apple-touch-icon.png") }}">
     <link rel="mask-icon" href="{{ get_url(path="mask-icon.svg") }}" color="#ec68aa">
-    <link rel="me" href="https://hachyderm.io/@tautropfli">
+    <link rel="me" href="{{ config.extra.meta.me }}">
+    <meta name="fediverse:creator" content="{{ config.extra.meta.me }}" />
     <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
     {% if config.extra.author %}
     <meta name="author" content="{{ config.extra.author }}">

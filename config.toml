@@ -21,3 +21,7 @@ menu = [
 ]
 
 feeds = ['blog/_index.md', 'til/_index.md']
+
+[extra.meta]
+me = 'https://hachyderm.io/@tautropfli'
+fediverse_creator = '@tautropfli@hachyderm.io'
