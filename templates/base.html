@@ -22,7 +22,7 @@
     {% block metadata %}{% endblock metadata %}
     <title>{% block title %}{% if page %}{{page.title}}{% elif section %}{{section.title}}{% else %}{{config.title}}{% endif %}{% endblock title %}</title>
 
-    <link rel="stylesheet" type="text/css" href="{{ get_url(path="main.css") }}" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{{ get_url(path="main.css", cachebust = true) }}" crossorigin="anonymous">
 
     {# Syntax Theme #}
     <link rel="stylesheet" type="text/css" href="{{ get_url(path="syntax-theme-dark.css") }}" media="(prefers-color-scheme: dark)">
