@@ -59,7 +59,7 @@
     color: var(--text-color);
     background-color: var(--background-color);
     -webkit-text-size-adjust: none; // Stop iOS Safari from adjusting the font size in landscape.
-    font-size: 1.125em;
+    font-size: max(1em, 18px); // If the user has set a font-size >= 18px they get exactly what they asked for.
 
     @media (prefers-reduced-motion: no-preference) {
         scroll-behavior: smooth;
