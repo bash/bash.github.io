@@ -23,7 +23,7 @@
     @media (prefers-color-scheme: dark) {
         background-color: var(--background-color);
         color: #fff;
-    }    
+    }
 }
 
 :root {
@@ -34,6 +34,7 @@
     --link-color: color-mix(in oklab, var(--accent-color), #000 15%);
     --content-max-width: 50rem;
     --text-max-width: 40rem;
+    --block-spacing: 1rem;
 
     @media (prefer-contrast: more) {
         --border-color: #373737;
@@ -65,7 +66,7 @@
     *:focus {
         outline: none;
     }
-    
+
     *:focus-visible {
         outline: auto;
         outline-offset: 2px;
@@ -76,21 +77,17 @@ body {
     display: grid;
     grid-template-columns: 1fr minmax(0, var(--content-max-width)) 1fr;
     grid-template-rows: 1fr max-content;
-    align-content: start;
-    justify-content: center;
     min-height: 100svh;
 }
 
 main {
     grid-column: 2;
-    margin: auto;
-    width: 100%;
     padding: 3rem 1rem;
 }
 
 // Block level elements get spacing afterwards
 h1, h2, h3, p, ul, ol, details {
-    margin-bottom: 1rem;
+    margin-bottom: var(--block-spacing);
 }
 
 h1, h2, h3, p, ul, ol {
@@ -99,7 +96,7 @@ h1, h2, h3, p, ul, ol {
 
 // .. but tables need some extra space
 table {
-    margin: 1.4rem 0;
+    margin: calc(1.4 * var(--block-spacing)) 0;
 }
 
 h1, h2, h3 {
@@ -220,6 +217,9 @@ footer {
 }
 
 .footnote-definition {
+    font-size: .8em;
+    --block-spacing: .8rem;
+
     &::before {
         content: '';
         border-top: 2px solid var(--border-color);
