@@ -12,7 +12,7 @@ SATELLITE_PAGES := $(wildcard satellite-pages/*)
 SATELLITE_PAGES_HTML := $(patsubst satellite-pages/%,public/%/index.html,$(SATELLITE_PAGES))
 
 .SECONDARY: # Do not delete intermediate files
-.PHONY: all watch serve publish
+.PHONY: all watch serve publish run
 
 all: $(ZOLA_SENTINEL) $(SATELLITE_PAGES_HTML)
 
@@ -24,6 +24,9 @@ else
 endif
 	./make-scripts/minify-css.bash public
 	@touch $(ZOLA_SENTINEL)
+
+run:
+	mprocs "$(MAKE) watch" "$(MAKE) serve"
 
 watch:
 	MAKE=$(MAKE) ./make-scripts/watch.bash
