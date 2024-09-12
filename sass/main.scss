@@ -13,7 +13,7 @@
 :root {
     --text-color: #000;
     --accent-color: #40a02b;
-    --secondary-color: #d5508d;
+    --secondary-color: #078aed;
     --link-color: color-mix(in oklab, var(--accent-color), #000 15%);
     --background-color: #fff;
     --background-color-1: #fff;
@@ -403,7 +403,7 @@ figure:has(img) {
     display: grid;
     grid-template-columns: max-content;
     grid-gap: 1rem;
-    
+
     figcaption {
         font-size: .8rem;
         text-align: center;
