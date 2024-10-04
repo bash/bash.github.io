@@ -108,10 +108,12 @@ h1 {
     font-size: 3rem;
     line-height: 1.4;
 
-    @supports (background-clip: text) {
-        background-image: linear-gradient(var(--accent-color), var(--secondary-color));
-        background-clip: text;
-        color: transparent;
+    @media not (forced-colors: active) {
+        @supports (background-clip: text) {
+            background-image: linear-gradient(var(--accent-color), var(--secondary-color));
+            background-clip: text;
+            color: transparent;
+        }
     }
 }
 
