@@ -167,21 +167,6 @@ strong {
     font-weight: 700;
 }
 
-.badge {
-    font-size: .7rem;
-    padding: 4px 1.5ch;
-    border-radius: 1em;
-    margin-right: 1ch;
-    background-color: var(--accent-color);
-    color: var(--background-color);
-    font-family: var(--sans-serif);
-}
-
-.badge,
-.badge + span {
-    vertical-align: middle;
-}
-
 em {
     font-style: italic;
 }

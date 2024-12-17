@@ -1,7 +1,6 @@
 MINIFY := npx lightningcss --minify --browserslist
 NPM_SENTINEL := node_modules/.sentinel
 ZOLA_SENTINEL := .zola-sentinel
-READING_LIST := content/reading-list.json
 CONTENT_FILES := $(shell find content -type f)
 SASS_FILES := $(shell find sass -type f)
 TEMPLATES := $(shell find templates -type f)
@@ -16,7 +15,7 @@ SATELLITE_PAGES_HTML := $(patsubst satellite-pages/%,public/%/index.html,$(SATEL
 
 all: $(ZOLA_SENTINEL) $(SATELLITE_PAGES_HTML)
 
-$(ZOLA_SENTINEL): $(CONTENT_FILES) $(SASS_FILES) $(TEMPLATES) $(STATICS) $(READING_LIST) $(NPM_SENTINEL) $(KATEX_OUTPUT_FILES) config.toml browserslist
+$(ZOLA_SENTINEL): $(CONTENT_FILES) $(SASS_FILES) $(TEMPLATES) $(STATICS) $(NPM_SENTINEL) $(KATEX_OUTPUT_FILES) config.toml browserslist
 ifeq ($(ZOLA_PUBLISH), true)
 	zola build
 else
@@ -42,9 +41,6 @@ publish:
 $(NPM_SENTINEL): package.json package-lock.json
 	npm install
 	@touch $(NPM_SENTINEL)
-
-$(READING_LIST):
-	./make-scripts/reading-list.bash > $@
 
 static/katex/%: $(NPM_SENTINEL)
 	@mkdir -p $(dir $@)

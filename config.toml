@@ -17,7 +17,6 @@ menu = [
     { name = "Home", url = "/" },
     { name = "Blog", url = "/blog" },
     { name = "TIL", url = "/til" },
-    { name = "Reading", url = "/reading-list" },
 ]
 
 feeds = ['blog/_index.md', 'til/_index.md']
