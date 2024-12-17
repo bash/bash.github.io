@@ -25,6 +25,8 @@ jobs:
       with:
         tool: zola@0.19.1
 
+    - run: sudo apt-get install dos2unix
+
     - run: wget https://github.com/bash/seite/releases/download/0.1.3/x86_64-unknown-linux-musl.tar.gz
     - run: tar -xvf x86_64-unknown-linux-musl.tar.gz
     - run: sudo mv seite /usr/local/bin/seite
