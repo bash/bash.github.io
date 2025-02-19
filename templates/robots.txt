@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /rust-gamedev.github.io/
+Disallow: /funcky-wip-api-docs/
 Allow: /
 Sitemap: {{ get_url(path="sitemap.xml") }}
