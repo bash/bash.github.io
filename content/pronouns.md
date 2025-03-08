@@ -4,7 +4,7 @@ title = "Tau's Pronouns"
 markdown_title = "Pronouns"
 +++
 
-<small>Dies Seite gibt's auch auf [Deutsch](/anrede).</small>
+<small>Diese Seite gibt's auch auf [Deutsch](/anrede).</small>
 
 Thank you for asking, I appreciate it! ☺️
 
