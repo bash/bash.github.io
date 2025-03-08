@@ -199,6 +199,13 @@ ul {
     margin-bottom: 0;
 }
 
+._targetable:target {
+    outline: 1px solid var(--accent-color);
+    text-shadow: var(--accent-color) 1px 0 10px;
+    border-radius: .2em;
+    margin: 0 .5ex;
+}
+
 .post-list {
     list-style-type: none;
     padding: 0;

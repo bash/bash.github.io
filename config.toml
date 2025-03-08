@@ -13,6 +13,7 @@ highlight_themes_css = [
 extra_syntaxes_and_themes = ["syntaxes"]
 
 [extra]
+default_language = "en"
 menu = [
     { name = "Home", url = "/" },
     { name = "Blog", url = "/blog" },
